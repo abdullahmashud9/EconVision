@@ -582,67 +582,40 @@ textarea.form-control {
 
 .econvision-receipt {
   width: 860px;
-  background-color: #FFFFFF;
-  border: 14px solid #132B3E;
-  outline: 2px solid #6EA35D;
-  outline-offset: -8px;
-  padding: 42px 48px;
-  border-radius: 8px;
-  font-family: var(--font-sans-body);
-  color: #1E293B;
+  background-color: #132B3E;
+  padding: 12px;
+  border-radius: 12px;
   box-sizing: border-box;
   position: relative;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-sans-body);
 }
 
-/* Certificate Corner Flourishes */
-.receipt-corner {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #6EA35D;
-  pointer-events: none;
-}
-
-.receipt-corner-tl {
-  top: 14px;
-  left: 14px;
-  border-right: none;
-  border-bottom: none;
-}
-
-.receipt-corner-tr {
-  top: 14px;
-  right: 14px;
-  border-left: none;
-  border-bottom: none;
-}
-
-.receipt-corner-bl {
-  bottom: 14px;
-  left: 14px;
-  border-right: none;
-  border-top: none;
-}
-
-.receipt-corner-br {
-  bottom: 14px;
-  right: 14px;
-  border-left: none;
-  border-top: none;
+.receipt-inner-frame {
+  background-color: #FFFFFF;
+  border: 1.5px solid #6EA35D;
+  border-radius: 6px;
+  padding: 36px 42px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .receipt-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #E2E8F0;
-  padding-bottom: 20px;
+  border-bottom: 1.5px solid #E2E8F0;
+  padding-bottom: 18px;
   margin-bottom: 24px;
 }
 
+.receipt-logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
 .receipt-logo-img {
-  height: 50px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -651,11 +624,11 @@ textarea.form-control {
   background: #F1F7EE;
   border: 1.5px solid #6EA35D;
   color: #2D6A22;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -663,67 +636,68 @@ textarea.form-control {
 }
 
 .receipt-badge-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #6EA35D;
+  display: inline-block;
 }
 
 .receipt-body {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .receipt-sub-eyebrow {
   font-family: var(--font-sans-body);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #6EA35D;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .receipt-headline {
   font-family: var(--font-serif-display);
-  font-size: 2.05rem;
+  font-size: 2.1rem;
   font-weight: 800;
   color: #132B3E;
-  margin-bottom: 12px;
-  line-height: 1.2;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
   letter-spacing: -0.02em;
+  display: block;
 }
 
 .receipt-divider-line {
-  width: 80px;
+  width: 70px;
   height: 3px;
-  background: linear-gradient(90deg, #356C97 0%, #6EA35D 100%);
-  margin: 0 auto 18px;
+  background: #6EA35D;
+  margin: 0 auto 20px auto;
   border-radius: 3px;
+  display: block;
 }
 
 .receipt-congrats-text {
-  font-size: 0.96rem;
-  line-height: 1.65;
+  font-size: 0.94rem;
+  line-height: 1.68;
   color: #334155;
-  margin: 0 auto 24px;
-  max-width: 730px;
+  margin: 0 auto 24px auto;
+  max-width: 720px;
   text-align: center;
 }
 
 .receipt-user-name {
   color: #132B3E;
   font-weight: 700;
-  background: rgba(53, 108, 151, 0.08);
-  padding: 2px 8px;
-  border-radius: 4px;
+  font-family: inherit;
   display: inline;
 }
 
 .receipt-meta-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  grid-template-columns: 1.15fr 1.15fr 1.2fr 0.9fr;
+  gap: 16px;
   background: #F8FAFC;
   border: 1px solid #CBD5E1;
   border-top: 3px solid #356C97;
@@ -736,16 +710,20 @@ textarea.form-control {
 .receipt-meta-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: flex-start;
 }
 
 .receipt-meta-label {
-  display: block;
+  height: 24px;
+  display: flex;
+  align-items: flex-end;
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: #64748B;
+  margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .receipt-meta-val {
@@ -759,13 +737,16 @@ textarea.form-control {
 .receipt-footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   border-top: 1.5px solid #E2E8F0;
   padding-top: 18px;
 }
 
 .receipt-footer-left {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .receipt-seal {
@@ -775,7 +756,6 @@ textarea.form-control {
   font-size: 0.84rem;
   color: #2D6A22;
   font-weight: 700;
-  margin-bottom: 4px;
 }
 
 .receipt-meta-sub {
@@ -786,6 +766,9 @@ textarea.form-control {
 
 .receipt-signature-block {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .receipt-signature-title {
