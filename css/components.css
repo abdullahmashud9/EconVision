@@ -583,7 +583,7 @@ textarea.form-control {
 .econvision-receipt {
   width: 860px;
   background-color: #132B3E;
-  padding: 12px;
+  padding: 14px;
   border-radius: 12px;
   box-sizing: border-box;
   position: relative;
@@ -595,7 +595,7 @@ textarea.form-control {
   background-color: #FFFFFF;
   border: 1.5px solid #6EA35D;
   border-radius: 6px;
-  padding: 36px 42px;
+  padding: 38px 44px;
   box-sizing: border-box;
   position: relative;
 }
@@ -607,6 +607,7 @@ textarea.form-control {
   border-bottom: 1.5px solid #E2E8F0;
   padding-bottom: 18px;
   margin-bottom: 24px;
+  min-height: 52px;
 }
 
 .receipt-logo-wrap {
@@ -615,7 +616,7 @@ textarea.form-control {
 }
 
 .receipt-logo-img {
-  height: 48px;
+  height: 46px;
   width: auto;
   display: block;
 }
@@ -628,24 +629,24 @@ textarea.form-control {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 50px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
+  line-height: 1;
 }
 
-.receipt-badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #6EA35D;
-  display: inline-block;
+.receipt-badge-dot-svg {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .receipt-body {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .receipt-sub-eyebrow {
@@ -655,32 +656,24 @@ textarea.form-control {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: #6EA35D;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .receipt-headline {
   font-family: var(--font-serif-display);
-  font-size: 2.1rem;
+  font-size: 2.15rem;
   font-weight: 800;
   color: #132B3E;
-  margin: 0 0 10px 0;
-  line-height: 1.25;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
   letter-spacing: -0.02em;
-  display: block;
-}
-
-.receipt-divider-line {
-  width: 70px;
-  height: 3px;
-  background: #6EA35D;
-  margin: 0 auto 20px auto;
-  border-radius: 3px;
   display: block;
 }
 
 .receipt-congrats-text {
   font-size: 0.94rem;
-  line-height: 1.68;
+  line-height: 1.7;
   color: #334155;
   margin: 0 auto 24px auto;
   max-width: 720px;
@@ -690,7 +683,6 @@ textarea.form-control {
 .receipt-user-name {
   color: #132B3E;
   font-weight: 700;
-  font-family: inherit;
   display: inline;
 }
 
@@ -739,47 +731,59 @@ textarea.form-control {
   justify-content: space-between;
   align-items: center;
   border-top: 1.5px solid #E2E8F0;
-  padding-top: 18px;
+  padding-top: 20px;
+  margin-top: 6px;
 }
 
 .receipt-footer-left {
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .receipt-seal {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 7px;
   font-size: 0.84rem;
   color: #2D6A22;
   font-weight: 700;
+  line-height: 1.2;
+}
+
+.receipt-seal-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .receipt-meta-sub {
   font-size: 0.76rem;
   color: #64748B;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .receipt-signature-block {
   text-align: right;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .receipt-signature-title {
   font-weight: 700;
   color: #132B3E;
   font-size: 0.86rem;
+  line-height: 1.2;
 }
 
 .receipt-signature-sub {
   font-size: 0.74rem;
   color: #64748B;
+  line-height: 1.2;
 }
 
 /* ==========================================================================
