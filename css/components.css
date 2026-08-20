@@ -623,7 +623,7 @@ textarea.form-control {
 
 .receipt-badge-pill {
   background: #F1F7EE;
-  border: 1.5px solid #6EA35D;
+  border: none;
   color: #2D6A22;
   font-size: 0.72rem;
   font-weight: 700;
