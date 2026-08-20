@@ -606,7 +606,11 @@
   <!-- Offscreen Printable Member Certificate Receipt (Rendered by html2canvas) -->
   <div class="receipt-offscreen-wrapper">
     <div class="econvision-receipt" id="econvisionMemberReceipt">
-      <div class="receipt-watermark">ECONVISION</div>
+      <!-- Certificate Corner Ornaments -->
+      <div class="receipt-corner receipt-corner-tl"></div>
+      <div class="receipt-corner receipt-corner-tr"></div>
+      <div class="receipt-corner receipt-corner-bl"></div>
+      <div class="receipt-corner receipt-corner-br"></div>
       
       <div class="receipt-header">
         <div class="receipt-logo-wrap">
@@ -619,40 +623,44 @@
       </div>
 
       <div class="receipt-body">
-        <div class="receipt-sub-eyebrow">Academic &amp; Professional Economics Community</div>
+        <div class="receipt-sub-eyebrow">Academic &amp; Professional Economics Network</div>
         <h2 class="receipt-headline">Certificate of Membership</h2>
+        <div class="receipt-divider-line"></div>
         
         <p class="receipt-congrats-text">
-          Congratulations, <span class="receipt-user-name" id="receiptUserName">Economist</span>! You have successfully registered for the EconVision Community. We are thrilled to welcome you to our premier network of economics scholars, professionals, and policy analysts. Together, we "See the economy before it happens." Please keep this receipt for your records.
+          Congratulations, <strong class="receipt-user-name" id="receiptUserName">Economist</strong>! You have successfully registered for the EconVision Community. We are thrilled to welcome you to our premier network of economics scholars, professionals, and policy analysts. Together, we "See the economy before it happens." Please keep this receipt for your records.
         </p>
 
         <div class="receipt-meta-grid">
           <div class="receipt-meta-item">
-            <strong>Member Name</strong>
-            <span id="receiptMemberName">Candidate</span>
+            <span class="receipt-meta-label">Member Name</span>
+            <strong class="receipt-meta-val" id="receiptMemberName">Candidate</strong>
           </div>
           <div class="receipt-meta-item">
-            <strong>Institutional Affiliation</strong>
-            <span id="receiptMemberAffiliation">Academic Institution</span>
+            <span class="receipt-meta-label">Institutional Affiliation</span>
+            <strong class="receipt-meta-val" id="receiptMemberAffiliation">Academic Institution</strong>
           </div>
           <div class="receipt-meta-item">
-            <strong>Professional Role</strong>
-            <span id="receiptMemberRole">Scholar</span>
+            <span class="receipt-meta-label">Professional Role</span>
+            <strong class="receipt-meta-val" id="receiptMemberRole">Scholar</strong>
           </div>
           <div class="receipt-meta-item">
-            <strong>Country / Region</strong>
-            <span id="receiptMemberCountry">International</span>
+            <span class="receipt-meta-label">Country / Region</span>
+            <strong class="receipt-meta-val" id="receiptMemberCountry">International</strong>
           </div>
         </div>
       </div>
 
       <div class="receipt-footer">
-        <div>
+        <div class="receipt-footer-left">
           <div class="receipt-seal">
-            <span>🛡️</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6EA35D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
             <span>Verified EconVision Scholar Pass</span>
           </div>
-          <div style="font-size: 0.76rem; color: #64748B; margin-top: 3px;">
+          <div class="receipt-meta-sub">
             <span id="receiptIssueDate">Issued: August 20, 2026</span> • <span id="receiptPassId">Pass ID: EV-2026-9821</span>
           </div>
         </div>

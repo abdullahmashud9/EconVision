@@ -292,10 +292,12 @@ async function generateAndDownloadReceipt(userData) {
   try {
     if (typeof html2canvas === 'function') {
       const canvas = await html2canvas(receiptElement, {
-        scale: 2, // High resolution retina rendering
+        scale: 2.5, // Ultra-sharp 2.5x retina rendering
         useCORS: true,
+        allowTaint: false,
         backgroundColor: '#FFFFFF',
-        logging: false
+        logging: false,
+        windowWidth: 860
       });
 
       // Convert canvas to image and trigger automatic download
