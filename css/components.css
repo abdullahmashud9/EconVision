@@ -15,12 +15,14 @@
   font-size: 0.95rem;
   font-weight: 600;
   padding: 0.75rem 1.65rem;
+  min-height: var(--touch-target-min, 44px);
   border-radius: 9999px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   border: 1px solid transparent;
   line-height: 1.25;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -30,12 +32,14 @@
 .btn-lg {
   padding: 0.95rem 2rem;
   font-size: 1.05rem;
+  min-height: 50px;
   border-radius: 9999px;
 }
 
 .btn-sm {
-  padding: 0.45rem 1rem;
+  padding: 0.45rem 1.15rem;
   font-size: 0.85rem;
+  min-height: 38px;
   border-radius: 9999px;
 }
 
@@ -359,7 +363,7 @@
   gap: var(--space-lg);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .form-grid-2 {
     grid-template-columns: 1fr;
     gap: var(--space-md);
@@ -391,20 +395,22 @@
 
 .form-control {
   width: 100%;
-  padding: 0.82rem 1.15rem;
+  padding: 0.78rem 1rem;
   font-family: var(--font-sans-body);
-  font-size: 0.95rem;
+  font-size: 1rem; /* 16px to prevent iOS Safari auto-zoom */
+  min-height: 48px;
   color: var(--color-text-primary);
   background-color: #FFFFFF;
   border: 1.5px solid #CBD5E1;
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
   transition: all var(--transition-fast);
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 .form-control::placeholder {
   color: #94A3B8;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 
 .form-control:focus {
@@ -439,8 +445,8 @@ textarea.form-control {
 .registration-form-card {
   background-color: #FFFFFF;
   border: 1px solid #CBD5E1;
-  border-radius: var(--radius-md);
-  padding: var(--space-2xl) var(--space-2xl);
+  border-radius: 14px;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
   box-shadow: 0 10px 35px rgba(11, 27, 50, 0.05);
   position: relative;
 }
@@ -453,7 +459,7 @@ textarea.form-control {
 
 .registration-card-title {
   font-family: var(--font-serif-heading);
-  font-size: 1.55rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
   font-weight: 700;
   color: var(--color-navy-dark);
   margin-bottom: var(--space-xs);
@@ -468,7 +474,8 @@ textarea.form-control {
 
 .btn-register-submit {
   width: 100%;
-  padding: 1rem 2rem;
+  min-height: 50px;
+  padding: 0.95rem 2rem;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1016,12 +1023,22 @@ textarea.form-control {
   align-items: center;
 }
 
+@media (max-width: 992px) {
+  .about-summary-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .about-summary-text {
+    font-size: 1.1rem;
+  }
+}
+
 .about-summary-content {
   max-width: 600px;
 }
 
 .about-summary-text {
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
   line-height: 1.75;
   color: var(--color-navy-dark);
   font-weight: 400;
@@ -1031,7 +1048,7 @@ textarea.form-control {
 .about-summary-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
+  gap: 0.5rem;
   margin-bottom: var(--space-xl);
 }
 
@@ -1044,7 +1061,7 @@ textarea.form-control {
   color: var(--color-navy-primary);
   background-color: #FFFFFF;
   border: 1px solid #CBD5E1;
-  padding: 0.4rem 0.85rem;
+  padding: 0.45rem 0.85rem;
   border-radius: var(--radius-sm);
 }
 
@@ -1089,8 +1106,10 @@ textarea.form-control {
 }
 
 .audience-icon-box {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   background-color: var(--color-brand-blue-light);
   border: 1px solid var(--color-brand-blue-border);
   border-radius: var(--radius-sm);
@@ -1103,8 +1122,8 @@ textarea.form-control {
 }
 
 .audience-icon-box svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   stroke: currentColor;
   fill: none;
   stroke-width: 2;

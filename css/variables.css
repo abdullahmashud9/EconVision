@@ -80,11 +80,13 @@
   --space-3xl: 4.5rem;   /* 72px */
   --space-4xl: 6rem;     /* 96px */
 
-  /* Layout Widths */
+  /* Layout Widths & Fluid Padding */
   --container-max-width: 1200px;
   --container-narrow-width: 860px;
   --container-reading-width: 720px;
-  --header-height: 86px;
+  --container-padding: clamp(1rem, 3.5vw, 2rem);
+  --header-height: 80px;
+  --touch-target-min: 44px;
 
   /* Transitions */
   --transition-fast: 0.18s ease-in-out;
