@@ -1,0 +1,99 @@
+/* ==========================================================================
+   EconVision Design System - CSS Variables & Tokens
+   Scholarly, Professional, Institutional Academic Theme
+   ========================================================================== */
+
+:root {
+  /* Primary Brand Blue Palette: Exact #356C97 */
+  --color-brand-blue: #356C97;
+  --color-brand-blue-hover: #295577;
+  --color-brand-blue-dark: #132B3E;
+  --color-brand-blue-light: #EEF4F9;
+  --color-brand-blue-border: #BDD4E5;
+  --color-navy-deep: #0C1D2A;
+  --color-navy-dark: #132B3E;
+  --color-navy-primary: #356C97;
+  --color-navy-medium: #295577;
+  --color-navy-light: #427EAE;
+  --color-navy-subtle: #EEF4F9;
+
+  /* Primary Brand Green Palette: Exact #6EA35D */
+  --color-brand-green: #6EA35D;
+  --color-brand-green-hover: #568448;
+  --color-brand-green-dark: #3E6133;
+  --color-brand-green-light: #F1F7EE;
+  --color-brand-green-border: #C7E2BD;
+  --color-green-dark: #3E6133;
+  --color-green-medium: #6EA35D;
+  --color-green-light: #F1F7EE;
+  --color-green-border: #C7E2BD;
+
+  /* Primary Accent Green Palette: Exact #6EA35D */
+  --color-accent-green: #6EA35D;
+  --color-accent-green-hover: #568448;
+  --color-accent-green-light: #F1F7EE;
+  --color-accent-green-border: #C7E2BD;
+
+  /* Legacy alias mappings strictly remapped to Green (#6EA35D) - No Yellow */
+  --color-gold-primary: #6EA35D;
+  --color-gold-hover: #568448;
+  --color-gold-light: #F1F7EE;
+  --color-gold-muted: #6EA35D;
+  --color-gold-border: #C7E2BD;
+
+  /* Backgrounds & Neutrals */
+  --color-bg-white: #FFFFFF;
+  --color-bg-alt: #F8FAF8;
+  --color-bg-canvas: #F0F4F8;
+  --color-bg-surface: #FFFFFF;
+
+  /* Text & Inks */
+  --color-text-primary: #101B26;
+  --color-text-secondary: #405060;
+  --color-text-muted: #6E8094;
+  --color-text-inverse: #FFFFFF;
+  --color-text-inverse-muted: #CBD8E6;
+
+  /* Hairlines & Borders (No heavy drop shadows) */
+  --border-hairline: 1px solid #E2E8F0;
+  --border-subtle: 1px solid #CBD5E1;
+  --border-navy: 1px solid rgba(30, 92, 139, 0.2);
+  --border-blue: 1px solid rgba(30, 92, 139, 0.4);
+  --border-green: 1px solid rgba(110, 163, 93, 0.4);
+  --border-gold: 1px solid rgba(110, 163, 93, 0.4);
+  --border-dark-hairline: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* Typography */
+  --font-serif-display: 'Playfair Display', 'Cormorant Garamond', 'Lora', Georgia, serif;
+  --font-serif-heading: 'Lora', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono-data: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4.5rem;   /* 72px */
+  --space-4xl: 6rem;     /* 96px */
+
+  /* Layout Widths */
+  --container-max-width: 1200px;
+  --container-narrow-width: 860px;
+  --container-reading-width: 720px;
+  --header-height: 86px;
+
+  /* Transitions */
+  --transition-fast: 0.18s ease-in-out;
+  --transition-base: 0.25s ease-in-out;
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Subtle Border Radii */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+}

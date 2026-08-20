@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us | EconVision LinkedIn Academic Community</title>
+  <meta name="description" content="Join EconVision. Connect with thousands of economics students, professors, researchers, and policy practitioners.">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- Global Sticky Header -->
+    <header class="site-header" id="mainHeader">
+      <div class="header-container">
+        <a href="index.html" class="brand-link" aria-label="EconVision - See the economy before it happens.">
+          <img src="logo.png" alt="EconVision Logo" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+            <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+            <li class="nav-item"><a href="articles.html" class="nav-link">Articles & Insights</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="join.html" class="header-cta-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.3a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+            </svg>
+            <span>Join EconVision</span>
+          </a>
+          <button type="button" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-drawer" id="mobileDrawer">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="about.html" class="mobile-nav-link">About EconVision</a></li>
+          <li><a href="community.html" class="mobile-nav-link">Community</a></li>
+          <li><a href="resources.html" class="mobile-nav-link">Resources</a></li>
+          <li><a href="articles.html" class="mobile-nav-link">Articles & Insights</a></li>
+          <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          <li><a href="spotlight.html" class="mobile-nav-link">Member Spotlight <span class="future-badge">Soon</span></a></li>
+          <li><a href="newsletter.html" class="mobile-nav-link">Newsletter <span class="future-badge">Soon</span></a></li>
+        </ul>
+        <a href="join.html" class="btn btn-green mobile-drawer-cta">
+          Join EconVision
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="site-main">
+      <!-- Academic Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li><span class="separator">/</span></li>
+            <li><span>Join Us</span></li>
+          </ul>
+          <div class="badge badge-green" style="margin-bottom: var(--space-xs);">Membership & Onboarding</div>
+          <h1 class="page-header-title">Join EconVision</h1>
+          <div class="hairline-green"></div>
+          <p class="page-header-description lead">
+            Become a part of our premier network of economics scholars, professors, researchers, policy analysts, and students worldwide.
+          </p>
+        </div>
+      </section>
+
+      <!-- Primary Join & Registration Section -->
+      <section class="section">
+        <div class="container">
+          <div class="grid-2" style="grid-template-columns: 1.35fr 1fr; gap: var(--space-3xl); align-items: flex-start;">
+            
+            <!-- Left: Embedded Registration Form Card -->
+            <div class="reveal-on-scroll">
+              <div class="registration-form-card">
+                <div class="registration-card-header">
+                  <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Academic Membership Application</span>
+                  <h2 class="registration-card-title">Join the EconVision Network</h2>
+                  <p class="registration-card-subtitle">
+                    Complete the registration form below to access our research repositories, virtual academic seminars, and verified scholar community.
+                  </p>
+                </div>
+
+                <!-- Registration Form -->
+                <form id="econRegistrationForm" novalidate>
+                  <!-- Row 1: Name & Email -->
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="regName" class="form-label">
+                        <span>Full Name <span class="required-asterisk">*</span></span>
+                      </label>
+                      <input type="text" id="regName" name="fullName" class="form-control" placeholder="e.g. Dr. Eleanor Vance" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="regEmail" class="form-label">
+                        <span>Academic / Institutional Email <span class="required-asterisk">*</span></span>
+                      </label>
+                      <input type="email" id="regEmail" name="email" class="form-control" placeholder="e.g. name@university.edu" required>
+                    </div>
+                  </div>
+
+                  <!-- Row 2: Contact Number & Country (Searchable Datalist) -->
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="regPhone" class="form-label">
+                        <span>Contact Number</span>
+                        <span class="form-label-subtext">Optional</span>
+                      </label>
+                      <input type="tel" id="regPhone" name="phone" class="form-control" placeholder="e.g. +1 (555) 019-2834">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="regCountry" class="form-label">
+                        <span>Country <span class="required-asterisk">*</span></span>
+                      </label>
+                      <input list="countryList" id="regCountry" name="country" class="form-control" placeholder="Search or type country..." required autocomplete="off">
+                      <datalist id="countryList">
+                        <option value="Afghanistan">
+                        <option value="Albania">
+                        <option value="Algeria">
+                        <option value="Andorra">
+                        <option value="Angola">
+                        <option value="Antigua and Barbuda">
+                        <option value="Argentina">
+                        <option value="Armenia">
+                        <option value="Australia">
+                        <option value="Austria">
+                        <option value="Azerbaijan">
+                        <option value="Bahamas">
+                        <option value="Bahrain">
+                        <option value="Bangladesh">
+                        <option value="Barbados">
+                        <option value="Belarus">
+                        <option value="Belgium">
+                        <option value="Belize">
+                        <option value="Benin">
+                        <option value="Bhutan">
+                        <option value="Bolivia">
+                        <option value="Bosnia and Herzegovina">
+                        <option value="Botswana">
+                        <option value="Brazil">
+                        <option value="Brunei">
+                        <option value="Bulgaria">
+                        <option value="Burkina Faso">
+                        <option value="Burundi">
+                        <option value="Cabo Verde">
+                        <option value="Cambodia">
+                        <option value="Cameroon">
+                        <option value="Canada">
+                        <option value="Central African Republic">
+                        <option value="Chad">
+                        <option value="Chile">
+                        <option value="China">
+                        <option value="Colombia">
+                        <option value="Comoros">
+                        <option value="Congo">
+                        <option value="Costa Rica">
+                        <option value="Croatia">
+                        <option value="Cuba">
+                        <option value="Cyprus">
+                        <option value="Czech Republic">
+                        <option value="Denmark">
+                        <option value="Djibouti">
+                        <option value="Dominica">
+                        <option value="Dominican Republic">
+                        <option value="DR Congo">
+                        <option value="Ecuador">
+                        <option value="Egypt">
+                        <option value="El Salvador">
+                        <option value="Equatorial Guinea">
+                        <option value="Eritrea">
+                        <option value="Estonia">
+                        <option value="Eswatini">
+                        <option value="Ethiopia">
+                        <option value="Fiji">
+                        <option value="Finland">
+                        <option value="France">
+                        <option value="Gabon">
+                        <option value="Gambia">
+                        <option value="Georgia">
+                        <option value="Germany">
+                        <option value="Ghana">
+                        <option value="Greece">
+                        <option value="Grenada">
+                        <option value="Guatemala">
+                        <option value="Guinea">
+                        <option value="Guinea-Bissau">
+                        <option value="Guyana">
+                        <option value="Haiti">
+                        <option value="Honduras">
+                        <option value="Hong Kong">
+                        <option value="Hungary">
+                        <option value="Iceland">
+                        <option value="India">
+                        <option value="Indonesia">
+                        <option value="Iran">
+                        <option value="Iraq">
+                        <option value="Ireland">
+                        <option value="Israel">
+                        <option value="Italy">
+                        <option value="Jamaica">
+                        <option value="Japan">
+                        <option value="Jordan">
+                        <option value="Kazakhstan">
+                        <option value="Kenya">
+                        <option value="Kiribati">
+                        <option value="Kuwait">
+                        <option value="Kyrgyzstan">
+                        <option value="Laos">
+                        <option value="Latvia">
+                        <option value="Lebanon">
+                        <option value="Lesotho">
+                        <option value="Liberia">
+                        <option value="Libya">
+                        <option value="Liechtenstein">
+                        <option value="Lithuania">
+                        <option value="Luxembourg">
+                        <option value="Madagascar">
+                        <option value="Malawi">
+                        <option value="Malaysia">
+                        <option value="Maldives">
+                        <option value="Mali">
+                        <option value="Malta">
+                        <option value="Marshall Islands">
+                        <option value="Mauritania">
+                        <option value="Mauritius">
+                        <option value="Mexico">
+                        <option value="Micronesia">
+                        <option value="Moldova">
+                        <option value="Monaco">
+                        <option value="Mongolia">
+                        <option value="Montenegro">
+                        <option value="Morocco">
+                        <option value="Mozambique">
+                        <option value="Myanmar">
+                        <option value="Namibia">
+                        <option value="Nauru">
+                        <option value="Nepal">
+                        <option value="Netherlands">
+                        <option value="New Zealand">
+                        <option value="Nicaragua">
+                        <option value="Niger">
+                        <option value="Nigeria">
+                        <option value="North Korea">
+                        <option value="North Macedonia">
+                        <option value="Norway">
+                        <option value="Oman">
+                        <option value="Pakistan">
+                        <option value="Palau">
+                        <option value="Palestine">
+                        <option value="Panama">
+                        <option value="Papua New Guinea">
+                        <option value="Paraguay">
+                        <option value="Peru">
+                        <option value="Philippines">
+                        <option value="Poland">
+                        <option value="Portugal">
+                        <option value="Qatar">
+                        <option value="Romania">
+                        <option value="Russia">
+                        <option value="Rwanda">
+                        <option value="Saint Kitts and Nevis">
+                        <option value="Saint Lucia">
+                        <option value="Saint Vincent and the Grenadines">
+                        <option value="Samoa">
+                        <option value="San Marino">
+                        <option value="Sao Tome and Principe">
+                        <option value="Saudi Arabia">
+                        <option value="Senegal">
+                        <option value="Serbia">
+                        <option value="Seychelles">
+                        <option value="Sierra Leone">
+                        <option value="Singapore">
+                        <option value="Slovakia">
+                        <option value="Slovenia">
+                        <option value="Solomon Islands">
+                        <option value="Somalia">
+                        <option value="South Africa">
+                        <option value="South Korea">
+                        <option value="South Sudan">
+                        <option value="Spain">
+                        <option value="Sri Lanka">
+                        <option value="Sudan">
+                        <option value="Suriname">
+                        <option value="Sweden">
+                        <option value="Switzerland">
+                        <option value="Syria">
+                        <option value="Taiwan">
+                        <option value="Tajikistan">
+                        <option value="Tanzania">
+                        <option value="Thailand">
+                        <option value="Timor-Leste">
+                        <option value="Togo">
+                        <option value="Tonga">
+                        <option value="Trinidad and Tobago">
+                        <option value="Tunisia">
+                        <option value="Turkey">
+                        <option value="Turkmenistan">
+                        <option value="Tuvalu">
+                        <option value="Uganda">
+                        <option value="Ukraine">
+                        <option value="United Arab Emirates">
+                        <option value="United Kingdom">
+                        <option value="United States">
+                        <option value="Uruguay">
+                        <option value="Uzbekistan">
+                        <option value="Vanuatu">
+                        <option value="Vatican City">
+                        <option value="Venezuela">
+                        <option value="Vietnam">
+                        <option value="Yemen">
+                        <option value="Zambia">
+                        <option value="Zimbabwe">
+                      </datalist>
+                    </div>
+                  </div>
+
+                  <!-- Row 3: Profession & Institutional / University Affiliation -->
+                  <div class="form-grid-2">
+                    <div class="form-group">
+                      <label for="regProfession" class="form-label">
+                        <span>Profession / Academic Role <span class="required-asterisk">*</span></span>
+                      </label>
+                      <select id="regProfession" name="profession" class="form-control" required>
+                        <option value="" disabled selected>Select Profession / Role...</option>
+                        <option value="Undergraduate Student">Undergraduate Student (Economics / Quant)</option>
+                        <option value="Graduate / Master's Student">Graduate / Master's Student</option>
+                        <option value="PhD Candidate / Doctoral Researcher">PhD Candidate / Doctoral Researcher</option>
+                        <option value="Professor / Faculty Member">Professor / Lecturer / Faculty</option>
+                        <option value="Postdoctoral Fellow / Researcher">Postdoctoral Fellow / Researcher</option>
+                        <option value="Central Bank / Policy Economist">Central Bank / Policy Economist</option>
+                        <option value="Financial Analyst / Quant">Financial Analyst / Quantitative Researcher</option>
+                        <option value="Industry Economist / Consultant">Industry Economist / Consultant</option>
+                        <option value="Independent Scholar">Independent Researcher / Scholar</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="regAffiliation" class="form-label">
+                        <span>Institutional / University Affiliation <span class="required-asterisk">*</span></span>
+                      </label>
+                      <input type="text" id="regAffiliation" name="affiliation" class="form-control" placeholder="e.g. Harvard, LSE, World Bank" required>
+                    </div>
+                  </div>
+
+                  <!-- Row 4: Why EconVision (Textarea) -->
+                  <div class="form-group">
+                    <label for="regWhy" class="form-label">
+                      <span>Why EconVision?</span>
+                      <span class="form-label-subtext">Briefly describe your research interests or goals</span>
+                    </label>
+                    <textarea id="regWhy" name="whyEconVision" rows="4" class="form-control" placeholder="e.g. Interested in macro modeling, discussing empirical time-series preprints, and attending virtual research seminars..."></textarea>
+                  </div>
+
+                  <!-- Submit Action Button -->
+                  <div style="margin-top: var(--space-xl);">
+                    <button type="submit" class="btn btn-green btn-lg btn-register-submit" id="btnRegisterSubmit">
+                      <span>Register</span>
+                      <span style="font-size: 1.2rem; line-height: 1;">→</span>
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Success Confirmation Message (Shown upon submission) -->
+                <div class="form-success-banner" id="registrationSuccessBanner">
+                  <div class="form-success-icon">✓</div>
+                  <h3 class="form-success-title">Registration Successful!</h3>
+                  <p class="form-success-text">
+                    Congratulations! Your official EconVision Membership Receipt has been automatically generated and downloaded. We are thrilled to welcome you to our global academic network.
+                  </p>
+
+                  <div class="community-join-actions">
+                    <!-- Button 1: LinkedIn Group -->
+                    <a href="https://www.linkedin.com/groups/32720170/" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-community-join">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.3a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+                      </svg>
+                      <span>Join our LinkedIn Group</span>
+                    </a>
+
+                    <!-- Button 2: WhatsApp Group -->
+                    <a href="https://chat.whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-green btn-community-join">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.31Z"/>
+                      </svg>
+                      <span>Join our WhatsApp Group</span>
+                    </a>
+                  </div>
+
+                  <div style="margin-top: var(--space-lg); border-top: 1px solid rgba(110, 163, 93, 0.25); padding-top: var(--space-md);">
+                    <button type="button" id="btnReDownloadReceipt" class="btn btn-sm btn-outline-navy" style="font-size: 0.84rem; cursor: pointer;">
+                      <span>📥 Download Receipt Again</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Sidebar Info & Member Privileges -->
+            <div class="reveal-on-scroll" style="display: flex; flex-direction: column; gap: var(--space-xl);">
+              
+              <!-- Member Privileges Card -->
+              <div class="callout-box" style="background-color: var(--color-navy-dark); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.12); padding: var(--space-2xl); border-radius: var(--radius-md);">
+                <span class="badge badge-green" style="margin-bottom: var(--space-sm);">Member Privileges</span>
+                <h3 style="color: #FFFFFF; margin-bottom: var(--space-md); font-family: var(--font-serif-heading); font-size: 1.35rem;">What Members Receive</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-md); font-size: 0.94rem; color: #CBD5E1;">
+                  <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                    <span style="color: var(--color-brand-green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                    <span>Access to exclusive virtual research seminars &amp; policy debates.</span>
+                  </li>
+                  <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                    <span style="color: var(--color-brand-green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                    <span>Direct networking with professors, central bank staff, and economists.</span>
+                  </li>
+                  <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                    <span style="color: var(--color-brand-green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                    <span>Graduate school guidance, RA opportunities, and statement reviews.</span>
+                  </li>
+                  <li style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                    <span style="color: var(--color-brand-green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                    <span>Peer review opportunities for working papers and empirical theses.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Onboarding Steps Card -->
+              <div class="card">
+                <h4 class="card-title" style="margin-bottom: var(--space-md);">Onboarding Process</h4>
+                <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                  <div style="display: flex; gap: var(--space-md); align-items: flex-start;">
+                    <div class="step-number-badge">1</div>
+                    <div>
+                      <strong style="color: var(--color-navy-dark); display: block; font-size: 0.95rem;">Submit Registration</strong>
+                      <span style="font-size: 0.88rem; color: var(--color-text-secondary);">Fill out the academic profile form with your institutional affiliation.</span>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; gap: var(--space-md); align-items: flex-start;">
+                    <div class="step-number-badge">2</div>
+                    <div>
+                      <strong style="color: var(--color-navy-dark); display: block; font-size: 0.95rem;">Review &amp; Invitation</strong>
+                      <span style="font-size: 0.88rem; color: var(--color-text-secondary);">Our committee confirms academic affiliation to maintain scholarly discourse.</span>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; gap: var(--space-md); align-items: flex-start;">
+                    <div class="step-number-badge">3</div>
+                    <div>
+                      <strong style="color: var(--color-navy-dark); display: block; font-size: 0.95rem;">Access Community</strong>
+                      <span style="font-size: 0.88rem; color: var(--color-text-secondary);">Participate in webinars, paper repositories, and cohort discussions.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Direct Security / Academic Note -->
+              <div style="padding: var(--space-md) var(--space-lg); background-color: var(--color-bg-alt); border-radius: var(--radius-sm); border: var(--border-hairline); font-size: 0.86rem; color: var(--color-text-secondary); line-height: 1.55;">
+                🔒 <strong>Scholarly Privacy:</strong> Your registration data is kept confidential and utilized exclusively for EconVision academic community onboarding.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section section-alt">
+        <div class="container container-reading">
+          <div class="section-header text-center reveal-on-scroll">
+            <span class="section-eyebrow">Frequently Asked Questions</span>
+            <h2>Membership Questions</h2>
+            <div class="hairline-green center"></div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
+            <div class="card reveal-on-scroll">
+              <h4 class="card-title">Is membership in EconVision completely free?</h4>
+              <div class="card-body">
+                Yes. EconVision is an independent academic community. All LinkedIn group discussions, resource repositories, and standard virtual seminars are 100% free of charge.
+              </div>
+            </div>
+
+            <div class="card reveal-on-scroll">
+              <h4 class="card-title">Who is eligible to join?</h4>
+              <div class="card-body">
+                Undergraduate and graduate students majoring in economics or related quantitative disciplines, university professors, post-doctoral fellows, central bank staff, policy analysts, and finance professionals with an interest in academic economics.
+              </div>
+            </div>
+
+            <div class="card reveal-on-scroll">
+              <h4 class="card-title">How are discussions moderated?</h4>
+              <div class="card-body">
+                Our moderation committee upholds rigorous standards of academic civility, empirical integrity, and constructive discourse. Spam, commercial promotions, and partisan hostility are promptly removed.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Academic Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="footer-brand-link" aria-label="EconVision Home">
+              <div class="footer-brand-logo-wrap">
+                <img src="logo.png" alt="EconVision Logo" class="footer-brand-logo-img">
+              </div>
+            </a>
+            <p class="footer-description">
+              An academic and professional networking community for economics students, professors, researchers, and finance/policy enthusiasts.
+            </p>
+            <div class="footer-linkedin-card">
+              <p>Connect with over thousands of economists in our verified LinkedIn forum.</p>
+              <a href="join.html" class="footer-linkedin-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.3a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+                </svg>
+                <span>Join EconVision</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Organization</h4>
+            <ul class="footer-nav-list">
+              <li><a href="about.html" class="footer-nav-link">About EconVision</a></li>
+              <li><a href="community.html" class="footer-nav-link">Community Hub</a></li>
+              <li><a href="join.html" class="footer-nav-link">Join Us</a></li>
+              <li><a href="spotlight.html" class="footer-nav-link">Member Spotlight <span class="future-badge">Soon</span></a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Academic</h4>
+            <ul class="footer-nav-list">
+              <li><a href="resources.html" class="footer-nav-link">Resources</a></li>
+              <li><a href="articles.html" class="footer-nav-link">Articles & Insights</a></li>
+              <li><a href="newsletter.html" class="footer-nav-link">Newsletter <span class="future-badge">Soon</span></a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Connect</h4>
+            <ul class="footer-nav-list">
+              <li><a href="contact.html" class="footer-nav-link">Contact Us</a></li>
+              <li><a href="join.html" class="footer-nav-link">LinkedIn Group</a></li>
+              <li><a href="about.html#governance" class="footer-nav-link">Academic Ethos</a></li>
+              <li><a href="articles.html#submissions" class="footer-nav-link">Submissions</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Institutional Inquiries</h4>
+            <div class="footer-contact-info">
+              <div class="footer-contact-item">
+                <span>Email:</span>
+                <a href="mailto:contact@econvision.org">contact@econvision.org</a>
+              </div>
+              <div class="footer-contact-item">
+                <span>Inquiries:</span>
+                <span>Editorial & Research Partnerships</span>
+              </div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--color-text-inverse-muted); margin: 0;">
+              EconVision is an independent academic community.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 EconVision. All rights reserved. Academic & Professional Economics Community.
+          </div>
+          <div class="footer-bottom-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="join.html">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Offscreen Printable Member Certificate Receipt (Rendered by html2canvas) -->
+  <div class="receipt-offscreen-wrapper">
+    <div class="econvision-receipt" id="econvisionMemberReceipt">
+      <div class="receipt-watermark">ECONVISION</div>
+      
+      <div class="receipt-header">
+        <div class="receipt-logo-wrap">
+          <img src="logo.png" alt="EconVision Logo" class="receipt-logo-img">
+        </div>
+        <div class="receipt-badge-pill">
+          <span class="receipt-badge-dot"></span>
+          <span>Official Member Pass • Verified</span>
+        </div>
+      </div>
+
+      <div class="receipt-body">
+        <div class="receipt-sub-eyebrow">Academic &amp; Professional Economics Community</div>
+        <h2 class="receipt-headline">Certificate of Membership</h2>
+        
+        <p class="receipt-congrats-text">
+          Congratulations, <span class="receipt-user-name" id="receiptUserName">Economist</span>! You have successfully registered for the EconVision Community. We are thrilled to welcome you to our premier network of economics scholars, professionals, and policy analysts. Together, we "See the economy before it happens." Please keep this receipt for your records.
+        </p>
+
+        <div class="receipt-meta-grid">
+          <div class="receipt-meta-item">
+            <strong>Member Name</strong>
+            <span id="receiptMemberName">Candidate</span>
+          </div>
+          <div class="receipt-meta-item">
+            <strong>Institutional Affiliation</strong>
+            <span id="receiptMemberAffiliation">Academic Institution</span>
+          </div>
+          <div class="receipt-meta-item">
+            <strong>Professional Role</strong>
+            <span id="receiptMemberRole">Scholar</span>
+          </div>
+          <div class="receipt-meta-item">
+            <strong>Country / Region</strong>
+            <span id="receiptMemberCountry">International</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="receipt-footer">
+        <div>
+          <div class="receipt-seal">
+            <span>🛡️</span>
+            <span>Verified EconVision Scholar Pass</span>
+          </div>
+          <div style="font-size: 0.76rem; color: #64748B; margin-top: 3px;">
+            <span id="receiptIssueDate">Issued: August 20, 2026</span> • <span id="receiptPassId">Pass ID: EV-2026-9821</span>
+          </div>
+        </div>
+
+        <div class="receipt-signature-block">
+          <div class="receipt-signature-title">EconVision Academic Board</div>
+          <div class="receipt-signature-sub">Executive Admissions &amp; Moderation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HTML2Canvas for dynamic receipt image generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

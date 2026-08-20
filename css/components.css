@@ -1,0 +1,1885 @@
+/* ==========================================================================
+   EconVision - Components
+   Academic Buttons, Cards, Badges, Page Headers, Forms
+   ========================================================================== */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 1.65rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  border: 1px solid transparent;
+  line-height: 1.25;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 0.95rem 2rem;
+  font-size: 1.05rem;
+  border-radius: 9999px;
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+}
+
+/* Green Primary Button */
+.btn-gold, .btn-green {
+  background-color: var(--color-brand-green);
+  color: #FFFFFF;
+  border-color: var(--color-brand-green-hover);
+}
+
+.btn-gold:hover, .btn-green:hover {
+  background-color: var(--color-brand-green-hover);
+  color: #FFFFFF;
+  border-color: var(--color-brand-green-hover);
+}
+
+/* Blue Primary Button */
+.btn-navy, .btn-blue {
+  background-color: var(--color-brand-blue);
+  color: #FFFFFF;
+  border-color: var(--color-brand-blue-hover);
+}
+
+.btn-navy:hover, .btn-blue:hover {
+  background-color: var(--color-brand-blue-hover);
+  color: #FFFFFF;
+}
+
+/* Outlined Buttons */
+.btn-outline-navy, .btn-outline-blue {
+  background-color: transparent;
+  color: var(--color-brand-blue);
+  border-color: var(--color-brand-blue);
+}
+
+.btn-outline-navy:hover, .btn-outline-blue:hover {
+  background-color: var(--color-brand-blue);
+  color: #FFFFFF;
+}
+
+.btn-outline-gold, .btn-outline-green {
+  background-color: transparent;
+  color: var(--color-brand-green);
+  border-color: var(--color-brand-green);
+}
+
+.btn-outline-gold:hover, .btn-outline-green:hover {
+  background-color: var(--color-brand-green);
+  color: #FFFFFF;
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-white:hover {
+  background-color: #FFFFFF;
+  color: var(--color-brand-blue-dark);
+  border-color: #FFFFFF;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+/* ==========================================================================
+   Badges & Scholarly Labels
+   ========================================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+}
+
+.badge-gold, .badge-green {
+  background-color: var(--color-brand-green-light);
+  color: var(--color-brand-green-dark);
+  border: 1px solid var(--color-brand-green-border);
+}
+
+.badge-navy, .badge-blue {
+  background-color: var(--color-brand-blue-light);
+  color: var(--color-brand-blue);
+  border: 1px solid var(--color-brand-blue-border);
+}
+
+.step-number-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-brand-blue-light);
+  border: 1.5px solid var(--color-brand-blue);
+  color: var(--color-brand-blue);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans-body);
+  font-weight: 700;
+  font-size: 0.92rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Academic Page Header Component (Common Across Sub-pages)
+   ========================================================================== */
+.page-header {
+  background-color: var(--color-bg-alt);
+  border-bottom: var(--border-hairline);
+  padding: var(--space-3xl) 0 var(--space-2xl) 0;
+  position: relative;
+}
+
+.page-header-navy {
+  background-color: var(--color-navy-dark);
+  color: #FFFFFF;
+  border-bottom: 2px solid var(--color-gold-primary);
+}
+
+.page-header-navy h1 {
+  color: #FFFFFF;
+}
+
+.page-header-navy .lead {
+  color: var(--color-text-inverse-muted);
+}
+
+.page-header-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.page-header-title {
+  margin-bottom: var(--space-sm);
+}
+
+.page-header-description {
+  max-width: var(--container-narrow-width);
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumbs a {
+  color: var(--color-text-muted);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-gold-primary);
+}
+
+.breadcrumbs span.separator {
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Academic Cards & Containment Frames
+   (Subtle hairlines, no heavy shadows)
+   ========================================================================== */
+.card {
+  background-color: var(--color-bg-surface);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  border-color: var(--color-gold-primary);
+}
+
+.card-header {
+  margin-bottom: var(--space-md);
+}
+
+.card-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.card-title a {
+  color: var(--color-navy-dark);
+}
+
+.card-title a:hover {
+  color: var(--color-gold-primary);
+}
+
+.card-body {
+  flex: 1 1 auto;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.card-footer {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Feature Box / Metric Box */
+.stat-box {
+  border-left: 3px solid var(--color-navy-primary);
+  padding-left: var(--space-md);
+}
+
+.stat-number {
+  font-family: var(--font-serif-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  line-height: 1;
+  margin-bottom: var(--space-2xs);
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* Academic Callout Frame */
+.callout-box {
+  background-color: var(--color-bg-alt);
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid var(--color-gold-primary);
+  padding: var(--space-xl);
+  border-radius: var(--radius-sm);
+}
+
+.callout-box-green {
+  border-left-color: var(--color-brand-green);
+  background-color: var(--color-brand-green-light);
+}
+
+/* Section Header Structure */
+.section-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.section-header.text-center {
+  max-width: var(--container-narrow-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.section-eyebrow-green {
+  color: var(--color-green-dark);
+}
+
+.section-title {
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Form Controls (Registration / Join Us / Contact Forms)
+   ========================================================================== */
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.form-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.form-label-subtext {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.required-asterisk {
+  color: var(--color-brand-green);
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.82rem 1.15rem;
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  background-color: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  line-height: 1.5;
+}
+
+.form-control::placeholder {
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-brand-blue);
+  box-shadow: 0 0 0 3px rgba(53, 108, 151, 0.15);
+  background-color: #FFFFFF;
+}
+
+select.form-control {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23356C97' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-help {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+}
+
+/* Academic Registration Card */
+.registration-form-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl) var(--space-2xl);
+  box-shadow: 0 10px 35px rgba(11, 27, 50, 0.05);
+  position: relative;
+}
+
+.registration-card-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  border-bottom: var(--border-hairline);
+}
+
+.registration-card-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.registration-card-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.btn-register-submit {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 16px rgba(110, 163, 93, 0.3);
+}
+
+.btn-register-submit:hover {
+  box-shadow: 0 6px 22px rgba(110, 163, 93, 0.45);
+}
+
+.form-success-banner {
+  display: none;
+  background: linear-gradient(135deg, #F1F7EE 0%, #E8F4E3 100%);
+  border: 1.5px solid var(--color-brand-green);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.form-success-banner.is-visible {
+  display: block;
+}
+
+.form-success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--color-brand-green);
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  box-shadow: 0 4px 14px rgba(110, 163, 93, 0.35);
+}
+
+.form-success-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-brand-green-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.form-success-text {
+  font-size: 0.95rem;
+  color: #2D4A22;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.community-join-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin: var(--space-xl) 0 var(--space-md);
+}
+
+.btn-community-join {
+  width: 100%;
+  padding: 1rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-community-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-community-join svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   EconVision Membership Certificate / Digital Pass Receipt (High-Res Off-Screen)
+   ========================================================================== */
+.receipt-offscreen-wrapper {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 820px;
+  z-index: -9999;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.econvision-receipt {
+  width: 820px;
+  background-color: #FFFFFF;
+  border: 12px solid #132B3E;
+  outline: 3px solid #6EA35D;
+  outline-offset: -7px;
+  padding: 40px 45px;
+  border-radius: 6px;
+  font-family: var(--font-sans-body);
+  color: #1E293B;
+  box-sizing: border-box;
+  background-image: radial-gradient(#E2E8F0 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.receipt-watermark {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font-family: var(--font-serif-display);
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: rgba(19, 43, 62, 0.032);
+  letter-spacing: 0.12em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.receipt-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.receipt-badge-pill {
+  background: #F1F7EE;
+  border: 1.5px solid #6EA35D;
+  color: #2D6A22;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.receipt-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #6EA35D;
+}
+
+.receipt-body {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.receipt-sub-eyebrow {
+  font-family: var(--font-sans-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #6EA35D;
+  margin-bottom: 6px;
+}
+
+.receipt-headline {
+  font-family: var(--font-serif-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #132B3E;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.receipt-congrats-text {
+  font-size: 0.98rem;
+  line-height: 1.68;
+  color: #334155;
+  margin: 0 auto 22px;
+  max-width: 710px;
+  text-align: center;
+}
+
+.receipt-user-name {
+  color: #132B3E;
+  font-weight: 800;
+  border-bottom: 2px solid #6EA35D;
+  padding-bottom: 1px;
+}
+
+.receipt-meta-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 1fr 0.9fr;
+  gap: 12px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-left: 4px solid #6EA35D;
+  border-radius: 8px;
+  padding: 14px 18px;
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.receipt-meta-item strong {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748B;
+  margin-bottom: 3px;
+}
+
+.receipt-meta-item span {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #0F172A;
+  word-break: break-word;
+}
+
+.receipt-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1.5px solid #E2E8F0;
+  padding-top: 16px;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.receipt-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #6EA35D;
+  font-weight: 700;
+}
+
+.receipt-signature-block {
+  text-align: right;
+}
+
+.receipt-signature-title {
+  font-weight: 700;
+  color: #132B3E;
+  font-size: 0.84rem;
+}
+
+.receipt-signature-sub {
+  font-size: 0.74rem;
+  color: #64748B;
+}
+
+/* ==========================================================================
+   Future Page Placeholder Components
+   ========================================================================== */
+.future-page-hero {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-lg);
+  border: 1px dashed #CBD5E1;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  margin: var(--space-2xl) 0;
+}
+
+/* ==========================================================================
+   Hero Section & Academic Illustration Styles
+   ========================================================================== */
+.hero-section {
+  padding: 4.5rem 0 4rem 0;
+  position: relative;
+  background-color: var(--color-bg-white);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+/* Editorial Hero Typography */
+.hero-editorial-headline {
+  font-family: var(--font-serif-display);
+  font-size: clamp(3rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-title-solid {
+  display: block;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.title-econ {
+  color: #356C97;
+}
+
+.title-vision {
+  color: #6EA35D;
+}
+
+.hero-title-outline {
+  display: block;
+  font-family: var(--font-serif-display);
+  font-weight: 400;
+  font-style: italic;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #356C97;
+  letter-spacing: -0.015em;
+}
+
+.hero-editorial-desc {
+  font-family: var(--font-sans-body);
+  font-size: 1.12rem;
+  line-height: 1.72;
+  color: #475569;
+  max-width: 520px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.editorial-accent-word {
+  font-style: italic;
+  font-family: var(--font-serif-heading);
+  color: var(--color-brand-green);
+  font-weight: 600;
+}
+
+.hero-editorial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.btn-pill-solid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #6EA35D 0%, #568448 100%);
+  color: #FFFFFF;
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(110, 163, 93, 0.3);
+}
+
+.btn-pill-solid:hover {
+  background: linear-gradient(135deg, #78B366 0%, #5E944E 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(110, 163, 93, 0.45);
+}
+
+.btn-pill-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: transparent;
+  color: var(--color-navy-dark);
+  font-family: var(--font-sans-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 1.5px solid #CBD5E1;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill-outline:hover {
+  border-color: var(--color-brand-blue);
+  color: var(--color-brand-blue);
+  background-color: var(--color-brand-blue-light);
+  transform: translateY(-2px);
+}
+
+.btn-pill-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.hero-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #E2E8F0;
+  font-size: 0.86rem;
+  color: #64748B;
+}
+
+.hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-trust-icon {
+  color: var(--color-brand-green);
+  font-weight: 700;
+}
+
+/* Academic Hero Illustration Frame */
+.hero-visual-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px -10px rgba(11, 27, 50, 0.08);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.hero-visual-card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-visual-header {
+  background-color: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 0.85rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-visual-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.hero-visual-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #CBD5E1;
+}
+
+.hero-visual-title {
+  font-family: var(--font-sans-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #356C97;
+}
+
+.hero-visual-body {
+  padding: var(--space-lg);
+}
+
+.hero-svg-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-section {
+    padding: 3rem 0;
+  }
+  .hero-editorial-headline {
+    font-size: clamp(2.6rem, 7.5vw, 3.6rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-editorial-headline {
+    font-size: 2.35rem;
+    line-height: 1.05;
+  }
+  .hero-editorial-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-pill-solid, .btn-pill-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   About EconVision Section Styles (Homepage Summary)
+   ========================================================================== */
+.about-summary-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-alt);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.about-summary-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-summary-content {
+  max-width: 600px;
+}
+
+.about-summary-text {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: var(--color-navy-dark);
+  font-weight: 400;
+  margin-bottom: var(--space-lg);
+}
+
+.about-summary-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xl);
+}
+
+.about-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-navy-primary);
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.about-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-gold-primary);
+}
+
+.about-graphic-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  box-shadow: 0 4px 16px rgba(11, 27, 50, 0.03);
+}
+
+/* ==========================================================================
+   Audience / "Who Is It For?" Grid & Card Styles
+   ========================================================================== */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.audience-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.audience-card:hover {
+  border-color: var(--color-brand-blue);
+  transform: translateY(-3px);
+}
+
+.audience-icon-box {
+  width: 46px;
+  height: 46px;
+  background-color: var(--color-brand-blue-light);
+  border: 1px solid var(--color-brand-blue-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
+}
+
+.audience-icon-box svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.audience-card-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.audience-card-text {
+  font-size: 0.94rem;
+  line-height: 1.62;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.audience-card-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-brand-green);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-top: var(--space-sm);
+  border-top: var(--border-hairline);
+}
+
+@media (max-width: 992px) {
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Benefits / "Why Join EconVision?" Styles
+   ========================================================================== */
+.benefits-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-bg-alt);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.benefit-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.benefit-card:hover {
+  border-color: var(--color-brand-green);
+  transform: translateY(-2px);
+}
+
+.benefit-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-brand-green-light);
+  border: 1px solid var(--color-brand-green-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-brand-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.benefit-content {
+  flex: 1 1 auto;
+}
+
+.benefit-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.benefit-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.benefits-cta-banner {
+  background-color: var(--color-brand-blue-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--color-brand-green);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl) var(--space-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  color: #FFFFFF;
+}
+
+.benefits-cta-text h3 {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  margin-bottom: var(--space-2xs);
+}
+
+.benefits-cta-text p {
+  color: var(--color-text-inverse-muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .benefits-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
+/* ==========================================================================
+   Resources Teaser / Homepage Repository Previews
+   ========================================================================== */
+.resources-teaser-section {
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+.resources-teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.resource-teaser-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.resource-teaser-card:hover {
+  border-color: var(--color-gold-primary);
+  transform: translateY(-2px);
+}
+
+.resource-teaser-card-highlight {
+  background-color: var(--color-brand-blue-light);
+  border-color: var(--color-brand-blue-border);
+}
+
+.resource-teaser-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.resource-teaser-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.resource-teaser-title a {
+  color: var(--color-navy-dark);
+}
+
+.resource-teaser-title a:hover {
+  color: var(--color-brand-green);
+}
+
+.resource-teaser-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.resource-teaser-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-brand-green);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.resource-teaser-link:hover {
+  color: var(--color-brand-green-hover);
+  transform: translateX(2px);
+}
+
+@media (max-width: 1100px) {
+  .resources-teaser-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resources-teaser-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .resources-teaser-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Events / Webinars Homepage Preview Section
+   ========================================================================== */
+.events-preview-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-bg-alt);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.events-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.event-preview-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.event-preview-card:hover {
+  border-color: var(--color-gold-primary);
+  transform: translateY(-3px);
+}
+
+.event-date-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  border-bottom: var(--border-hairline);
+}
+
+.event-date-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.event-date-month {
+  font-family: var(--font-sans-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-gold-hover);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.event-date-day {
+  font-family: var(--font-serif-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+}
+
+.event-time-tag {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.event-preview-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+  line-height: 1.35;
+}
+
+.event-preview-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+.event-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  border-top: var(--border-hairline);
+}
+
+@media (max-width: 992px) {
+  .events-preview-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* ==========================================================================
+   Articles & Insights Homepage Preview Section
+   ========================================================================== */
+.articles-preview-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-bg-surface);
+  position: relative;
+}
+
+.articles-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.article-preview-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.article-preview-card:hover {
+  border-color: var(--color-gold-primary);
+  transform: translateY(-3px);
+}
+
+.article-preview-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.article-reading-time {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.article-preview-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-sm);
+  line-height: 1.38;
+}
+
+.article-preview-title a {
+  color: var(--color-navy-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.article-preview-title a:hover {
+  color: var(--color-brand-green);
+}
+
+.article-preview-excerpt {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+.article-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  border-top: var(--border-hairline);
+}
+
+.article-read-more-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-brand-green);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.article-read-more-link:hover {
+  color: var(--color-brand-green-hover);
+  transform: translateX(3px);
+}
+
+@media (max-width: 992px) {
+  .articles-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 640px) {
+  .articles-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Testimonials / Member Voices Section
+   ========================================================================== */
+.testimonials-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-bg-alt);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+  position: relative;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.testimonial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-brand-green);
+  transform: translateY(-3px);
+}
+
+.testimonial-quote-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-brand-green);
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+}
+
+.testimonial-quote-text {
+  font-family: var(--font-serif-heading);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.68;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xl);
+  flex-grow: 1;
+}
+
+.testimonial-author-block {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-hairline);
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-brand-green-light);
+  border: 1.5px solid var(--color-brand-green);
+  color: var(--color-brand-green-dark);
+  font-family: var(--font-serif-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar-faculty {
+  background-color: var(--color-brand-green-light);
+  border-color: var(--color-brand-green);
+  color: var(--color-brand-green-dark);
+}
+
+.testimonial-avatar-fellow {
+  background-color: var(--color-brand-blue-light);
+  border-color: var(--color-brand-blue);
+  color: var(--color-brand-blue);
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-name {
+  font-family: var(--font-sans-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  line-height: 1.25;
+}
+
+.testimonial-author-role {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.35;
+}
+
+.testimonial-badge-top {
+  position: absolute;
+  top: -10px;
+  right: var(--space-lg);
+}
+
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* ==========================================================================
+   Luxury Floating Conversion Section ("Join the Community")
+   ========================================================================== */
+.main-conversion-section {
+  background-color: #F4F7FA;
+  padding: 5rem 0 6rem;
+  position: relative;
+}
+
+.conversion-card-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.conversion-card {
+  background: linear-gradient(135deg, #132B3E 0%, #0A1C2A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 4.8rem 3rem;
+  box-shadow: 0 25px 65px -15px rgba(11, 28, 42, 0.35), 0 0 0 1px rgba(110, 163, 93, 0.18);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.conversion-card::before {
+  content: '';
+  position: absolute;
+  top: -45%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(110, 163, 93, 0.25) 0%, rgba(53, 108, 151, 0.16) 50%, transparent 75%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(25px);
+}
+
+.conversion-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.conversion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(110, 163, 93, 0.15);
+  border: 1px solid rgba(110, 163, 93, 0.38);
+  color: #8FD17C;
+  font-family: var(--font-sans-body);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.45rem 1.15rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.conversion-badge-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #8FD17C;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #8FD17C;
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.6; }
+}
+
+.conversion-title {
+  font-family: var(--font-serif-display);
+  font-size: clamp(2.3rem, 4.2vw, 3.3rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.conversion-subtitle {
+  font-family: var(--font-sans-body);
+  font-size: 1.12rem;
+  line-height: 1.68;
+  color: #CBD5E1;
+  margin: 0 auto 2.5rem;
+  max-width: 600px;
+}
+
+.btn-conversion-luxury, .btn-conversion-gold, .btn-conversion-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: linear-gradient(135deg, #6EA35D 0%, #548246 100%);
+  color: #FFFFFF;
+  font-family: var(--font-sans-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 1.2rem 2.8rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  box-shadow: 0 10px 30px -5px rgba(110, 163, 93, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-conversion-luxury:hover, .btn-conversion-gold:hover, .btn-conversion-green:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #78B366 0%, #5E944E 100%);
+  color: #FFFFFF;
+  box-shadow: 0 16px 40px -5px rgba(110, 163, 93, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-conversion-luxury svg, .btn-conversion-gold svg, .btn-conversion-green svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.conversion-trust-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2.25rem;
+}
+
+.conversion-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #E2E8F0;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.conversion-chip-icon {
+  color: #8FD17C;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .conversion-card {
+    padding: 3rem 1.5rem;
+    border-radius: 20px;
+  }
+  .conversion-title {
+    font-size: 2rem;
+  }
+  .conversion-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .btn-conversion-luxury {
+    width: 100%;
+    justify-content: center;
+    padding: 1.1rem 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,318 @@
+/* ==========================================================================
+   EconVision - Base Styles & Typography
+   Scholarly Academic Foundation
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&display=swap');
+
+/* Modern Box-Sizing & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+}
+
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body {
+  font-family: var(--font-sans-body);
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Academic Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif-heading);
+  color: var(--color-navy-dark);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--color-text-secondary);
+}
+
+p.lead {
+  font-size: 1.22rem;
+  line-height: 1.7;
+  color: var(--color-navy-primary);
+  font-weight: 400;
+}
+
+.text-scholarly {
+  font-family: var(--font-serif-heading);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+/* Links & Hover States */
+a {
+  color: var(--color-navy-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-brand-green);
+}
+
+/* Editorial Quotes & Academic Blocks */
+blockquote {
+  margin: var(--space-xl) 0;
+  padding: var(--space-lg) var(--space-xl);
+  border-left: 3px solid var(--color-brand-green);
+  background-color: var(--color-bg-alt);
+  font-family: var(--font-serif-heading);
+  font-size: 1.18rem;
+  font-style: italic;
+  color: var(--color-navy-dark);
+}
+
+blockquote cite {
+  display: block;
+  font-family: var(--font-sans-body);
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Dividers & Hairlines */
+hr, .hairline-divider {
+  border: 0;
+  height: 1px;
+  background-color: #E2E8F0;
+  margin: var(--space-2xl) 0;
+}
+
+.hairline-green, .hairline-gold {
+  border: 0;
+  height: 2px;
+  background-color: var(--color-brand-green);
+  width: 60px;
+  margin: var(--space-md) 0 var(--space-lg) 0;
+}
+
+.hairline-blue {
+  border: 0;
+  height: 2px;
+  background-color: var(--color-brand-blue);
+  width: 60px;
+  margin: var(--space-md) 0 var(--space-lg) 0;
+}
+
+.hairline-green.center, .hairline-gold.center, .hairline-blue.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.container-reading {
+  width: 100%;
+  max-width: var(--container-reading-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+/* Section Spacing with Generous Whitespace */
+.section {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.section-lg {
+  padding: var(--space-4xl) 0;
+}
+
+.section-sm {
+  padding: var(--space-xl) 0;
+}
+
+.section-alt {
+  background-color: var(--color-bg-alt);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+
+.section-navy {
+  background-color: var(--color-navy-dark);
+  color: var(--color-text-inverse);
+  border-top: var(--border-dark-hairline);
+  border-bottom: var(--border-dark-hairline);
+}
+
+.section-navy h1,
+.section-navy h2,
+.section-navy h3,
+.section-navy h4 {
+  color: var(--color-text-inverse);
+}
+
+.section-navy p {
+  color: var(--color-text-inverse-muted);
+}
+
+/* Grid Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 992px) {
+  .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+  .section-lg {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+/* Utility alignments & text helpers */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-gold { color: var(--color-gold-primary); }
+.text-green { color: var(--color-green-dark); }
+.text-navy { color: var(--color-navy-primary); }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Subtle Scroll Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
