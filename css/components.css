@@ -625,23 +625,17 @@ textarea.form-control {
   background: #F1F7EE;
   border: 1.5px solid #6EA35D;
   color: #2D6A22;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding: 7px 16px;
+  padding: 6px 16px;
   border-radius: 50px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  line-height: 1;
-}
-
-.receipt-badge-dot-svg {
-  width: 8px;
-  height: 8px;
-  flex-shrink: 0;
-  display: block;
+  justify-content: center;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .receipt-body {
