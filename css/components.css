@@ -629,19 +629,23 @@ textarea.form-control {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  padding: 0 18px;
-  height: 32px;
+  padding: 6px 16px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   text-align: center;
+  margin: 0;
+  line-height: 1;
 }
 
 .receipt-badge-text {
-  display: block;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
   line-height: 1;
+  vertical-align: middle;
 }
 
 .receipt-body {
