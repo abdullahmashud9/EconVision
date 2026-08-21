@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initRegistrationForm();
   initContactForm();
+  initBackToTop();
 });
 
 /**
@@ -398,4 +399,30 @@ async function generateAndDownloadReceipt(userData) {
   } catch (err) {
     console.error('Error generating receipt canvas:', err);
   }
+}
+
+/**
+ * 8. Floating Back to Top Button
+ */
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('btnBackToTop');
+  if (!backToTopBtn) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 350) {
+      backToTopBtn.classList.add('is-visible');
+    } else {
+      backToTopBtn.classList.remove('is-visible');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 }
