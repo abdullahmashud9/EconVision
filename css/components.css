@@ -395,7 +395,7 @@
 
 .form-control {
   width: 100%;
-  padding: 0.78rem 1rem;
+  padding: 12px 16px;
   font-family: var(--font-sans-body);
   font-size: 1rem; /* 16px to prevent iOS Safari auto-zoom */
   min-height: 48px;
@@ -441,6 +441,43 @@ textarea.form-control {
   margin-top: 0.35rem;
 }
 
+/* Join Layout Grid */
+.join-layout-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--space-3xl);
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .join-layout-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* Event Card Grid */
+.event-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .event-card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .event-card-grid > div:first-child {
+    border-right: none !important;
+    border-bottom: var(--border-hairline);
+    padding-right: 0 !important;
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+}
+
 /* Academic Registration Card */
 .registration-form-card {
   background-color: #FFFFFF;
@@ -449,6 +486,16 @@ textarea.form-control {
   padding: clamp(1.25rem, 4vw, 2.5rem);
   box-shadow: 0 10px 35px rgba(11, 27, 50, 0.05);
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .registration-form-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 .registration-card-header {
@@ -474,8 +521,8 @@ textarea.form-control {
 
 .btn-register-submit {
   width: 100%;
-  min-height: 50px;
-  padding: 0.95rem 2rem;
+  min-height: 48px;
+  padding: 12px 24px;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -484,6 +531,7 @@ textarea.form-control {
   justify-content: center;
   gap: 0.6rem;
   box-shadow: 0 4px 16px rgba(110, 163, 93, 0.3);
+  box-sizing: border-box;
 }
 
 .btn-register-submit:hover {
@@ -538,12 +586,23 @@ textarea.form-control {
   flex-direction: column;
   gap: var(--space-md);
   margin: var(--space-xl) 0 var(--space-md);
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .community-join-actions {
+    flex-direction: row;
+  }
+  .community-join-actions .btn-community-join {
+    flex: 1;
+  }
 }
 
 .btn-community-join {
   width: 100%;
-  padding: 1rem 1.8rem;
-  font-size: 1rem;
+  min-height: 48px;
+  padding: 12px 20px;
+  font-size: 0.96rem;
   font-weight: 700;
   border-radius: 50px;
   display: inline-flex;
@@ -553,6 +612,7 @@ textarea.form-control {
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .btn-community-join:hover {
@@ -564,6 +624,7 @@ textarea.form-control {
   width: 22px;
   height: 22px;
   fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
