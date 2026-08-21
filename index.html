@@ -3,20 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EconVision | Academic & Professional Economics Community</title>
-  <meta name="description" content="EconVision is a premier academic and networking community for economics students, professors, researchers, and finance/policy enthusiasts centered around our active LinkedIn group.">
+    <title>EconVision | Economics & Policy Scholars Network</title>
+  <meta name="description" content="EconVision is a premier professional network connecting economics scholars, policy analysts, researchers, and students for rigorous academic collaboration.">
+  <meta name="keywords" content="economics scholars, policy analysts, researchers, professional network, economics community, econometrics, macroeconomics">
+  <meta name="author" content="EconVision Community">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://econvision.vercel.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EconVision">
+  <meta property="og:url" content="https://econvision.vercel.app/">
+  <meta property="og:title" content="EconVision | Economics & Policy Scholars Network">
+  <meta property="og:description" content="EconVision is a premier professional network connecting economics scholars, policy analysts, researchers, and students for rigorous academic collaboration.">
+  <meta property="og:image" content="https://econvision.vercel.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="EconVision - Economics & Policy Network">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://econvision.vercel.app/">
+  <meta name="twitter:title" content="EconVision | Economics & Policy Scholars Network">
+  <meta name="twitter:description" content="EconVision is a premier professional network connecting economics scholars, policy analysts, researchers, and students for rigorous academic collaboration.">
+  <meta name="twitter:image" content="https://econvision.vercel.app/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="EconVision - Economics & Policy Network">
+
+  <!-- Structured Data: Organization & WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://econvision.vercel.app/#organization",
+        "name": "EconVision",
+        "url": "https://econvision.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://econvision.vercel.app/logo.png",
+          "caption": "EconVision Logo"
+        },
+        "description": "An academic and professional networking community for economics students, professors, researchers, and finance/policy enthusiasts.",
+        "sameAs": [
+          "https://www.linkedin.com/groups/32720170/",
+          "https://chat.whatsapp.com/DaQmRsLxQ8a4c5whbJrasH"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@econvision.org",
+          "contactType": "academic coordination"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://econvision.vercel.app/#website",
+        "url": "https://econvision.vercel.app/",
+        "name": "EconVision",
+        "publisher": {
+          "@id": "https://econvision.vercel.app/#organization"
+        },
+        "inLanguage": "en-US",
+        "description": "Academic and professional networking community for economics scholars, researchers, and policy analysts."
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <!-- Global Scroll Progress Indicator -->
-  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-
   <div class="site-wrapper">
     <!-- Global Sticky Header -->
     <header class="site-header" id="mainHeader">
       <div class="header-container">
         <a href="index.html" class="brand-link" aria-label="EconVision - See the economy before it happens.">
-          <img src="logo.png" alt="EconVision Logo" class="brand-logo-img">
+          <img src="logo.png" alt="EconVision Logo - See the economy before it happens" class="brand-logo-img">
         </a>
 
         <!-- Desktop Navigation -->
@@ -38,7 +100,7 @@
           </a>
 
           <!-- Mobile Hamburger Toggle -->
-          <button type="button" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <button type="button" class="mobile-menu-toggle" aria-label="Toggle aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -149,8 +211,8 @@
                       <line x1="45" y1="120" x2="190" y2="45" stroke="#6EA35D" stroke-width="2.5" stroke-linecap="round"/>
                       <text x="195" y="48" font-family="Lora, serif" font-size="11" font-weight="700" fill="#6EA35D">S</text>
 
-                      <!-- Equilibrium Intersection Dot (Animated Pulse) -->
-                      <circle cx="117.5" cy="82.5" r="4.5" class="hero-eq-dot" fill="#356C97" stroke="#FFFFFF" stroke-width="1.5"/>
+                      <!-- Equilibrium Intersection Dot -->
+                      <circle cx="117.5" cy="82.5" r="4.5" fill="#356C97" stroke="#FFFFFF" stroke-width="1.5"/>
                       <line x1="117.5" y1="82.5" x2="117.5" y2="130" stroke="#356C97" stroke-width="1" stroke-dasharray="3 3"/>
                       <line x1="25" y1="82.5" x2="117.5" y2="82.5" stroke="#6EA35D" stroke-width="1" stroke-dasharray="3 3"/>
                       
@@ -164,12 +226,10 @@
                       <text x="14" y="24" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#356C97" letter-spacing="0.05em">MACRO TRENDS &amp; TIME SERIES</text>
                       
                       <!-- Bar Chart Elements -->
-                      <g class="hero-bar-chart">
-                        <rect x="25" y="95" width="18" height="35" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
-                        <rect x="52" y="75" width="18" height="55" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
-                        <rect x="79" y="55" width="18" height="75" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
-                        <rect x="106" y="85" width="18" height="45" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
-                      </g>
+                      <rect x="25" y="95" width="18" height="35" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
+                      <rect x="52" y="75" width="18" height="55" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
+                      <rect x="79" y="55" width="18" height="75" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
+                      <rect x="106" y="85" width="18" height="45" fill="#EEF4F9" stroke="#356C97" stroke-width="1" rx="1"/>
                       
                       <!-- Regression Trendline Overlay (Green #6EA35D) -->
                       <path d="M 25 110 Q 75 70, 130 60 T 215 40" fill="none" stroke="#6EA35D" stroke-width="2.5" stroke-linecap="round"/>
@@ -207,12 +267,10 @@
                         <rect x="20" y="16" width="12" height="3" fill="#6EA35D" rx="1"/>
                         <!-- Body / Suit -->
                         <path d="M 5 65 Q 25 38, 45 65 Z" fill="#356C97"/>
-                        <!-- Speech Bubble (Floating) -->
-                        <g class="hero-bubble-left">
-                          <rect x="35" y="-12" width="70" height="24" rx="4" fill="#EEF4F9" stroke="#356C97" stroke-width="1"/>
-                          <text x="42" y="4" font-family="Lora, serif" font-size="9.5" font-style="italic" font-weight="600" fill="#356C97">β₁ &gt; 0, p&lt;0.01</text>
-                          <polygon points="45,12 40,20 52,12" fill="#EEF4F9"/>
-                        </g>
+                        <!-- Speech Bubble -->
+                        <rect x="35" y="-12" width="70" height="24" rx="4" fill="#EEF4F9" stroke="#356C97" stroke-width="1"/>
+                        <text x="42" y="4" font-family="Lora, serif" font-size="9.5" font-style="italic" font-weight="600" fill="#356C97">β₁ &gt; 0, p&lt;0.01</text>
+                        <polygon points="45,12 40,20 52,12" fill="#EEF4F9"/>
                       </g>
 
                       <!-- Student / Researcher Figure (Center-Right - Green #6EA35D) -->
@@ -221,12 +279,10 @@
                         <circle cx="25" cy="20" r="14" fill="#3E6133"/>
                         <!-- Body -->
                         <path d="M 5 65 Q 25 38, 45 65 Z" fill="#6EA35D"/>
-                        <!-- Speech Bubble (Floating) -->
-                        <g class="hero-bubble-right">
-                          <rect x="-65" y="-12" width="80" height="24" rx="4" fill="#F1F7EE" stroke="#6EA35D" stroke-width="1"/>
-                          <text x="-58" y="4" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#3E6133">Diff-in-Diff Test</text>
-                          <polygon points="5,12 12,19 8,12" fill="#F1F7EE"/>
-                        </g>
+                        <!-- Speech Bubble -->
+                        <rect x="-65" y="-12" width="80" height="24" rx="4" fill="#F1F7EE" stroke="#6EA35D" stroke-width="1"/>
+                        <text x="-58" y="4" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#3E6133">Diff-in-Diff Test</text>
+                        <polygon points="5,12 12,19 8,12" fill="#F1F7EE"/>
                       </g>
 
                       <!-- Bottom Caption Banner -->
@@ -277,13 +333,13 @@
             <div class="reveal-on-scroll">
               <div class="about-graphic-card">
                 <svg viewBox="0 0 460 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;" role="img" aria-label="EconVision ecosystem connecting students, academics, and professionals">
-                  <!-- Central Hub Connection Lines (Animated Data Stream) -->
-                  <line x1="105" y1="80" x2="230" y2="150" stroke="#CBD5E1" stroke-width="2" class="network-stream-line"/>
-                  <line x1="355" y1="80" x2="230" y2="150" stroke="#CBD5E1" stroke-width="2" class="network-stream-line"/>
-                  <line x1="230" y1="230" x2="230" y2="150" stroke="#CBD5E1" stroke-width="2" class="network-stream-line"/>
+                  <!-- Central Hub Connection Lines -->
+                  <line x1="105" y1="80" x2="230" y2="150" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
+                  <line x1="355" y1="80" x2="230" y2="150" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
+                  <line x1="230" y1="230" x2="230" y2="150" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4"/>
 
-                  <!-- Central EconVision Emblem Node (Breathing Pulse) -->
-                  <g transform="translate(230, 150)" class="ecosystem-hub-node">
+                  <!-- Central EconVision Emblem Node -->
+                  <g transform="translate(230, 150)">
                     <circle r="46" fill="#132B3E" stroke="#6EA35D" stroke-width="2"/>
                     <text text-anchor="middle" y="-6" font-family="Lora, serif" font-size="16" font-weight="700" fill="#FFFFFF">EconVision</text>
                     <text text-anchor="middle" y="14" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#6EA35D" letter-spacing="0.08em">COMMUNITY</text>
@@ -334,7 +390,7 @@
             </p>
           </div>
 
-          <div class="audience-grid reveal-stagger">
+          <div class="audience-grid">
             <!-- 1. Economics Students -->
             <div class="audience-card reveal-on-scroll">
               <div class="audience-icon-box">
@@ -456,7 +512,7 @@
             </p>
           </div>
 
-          <div class="benefits-grid reveal-stagger">
+          <div class="benefits-grid">
             <!-- Benefit 1: Discuss Economics Topics -->
             <div class="benefit-card reveal-on-scroll">
               <div class="benefit-icon-wrapper">
@@ -587,7 +643,7 @@
             </p>
           </div>
 
-          <div class="resources-teaser-grid reveal-stagger">
+          <div class="resources-teaser-grid">
             <!-- 1. Economics Articles -->
             <div class="resource-teaser-card reveal-on-scroll">
               <div class="resource-teaser-top">
@@ -943,7 +999,7 @@
           <div class="footer-brand-col">
             <a href="index.html" class="footer-brand-link" aria-label="EconVision Home">
               <div class="footer-brand-logo-wrap">
-                <img src="logo.png" alt="EconVision Logo" class="footer-brand-logo-img">
+                <img src="logo.png" alt="EconVision Logo - See the economy before it happens" class="footer-brand-logo-img">
               </div>
             </a>
             <p class="footer-description">
@@ -1024,13 +1080,6 @@
       </div>
     </footer>
   </div>
-
-  <!-- Back to Top Floating Button -->
-  <button type="button" class="btn-back-to-top" id="btnBackToTop" aria-label="Scroll back to top">
-    <svg viewBox="0 0 24 24">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
 
   <!-- Global Interaction Scripts -->
   <script src="js/main.js"></script>

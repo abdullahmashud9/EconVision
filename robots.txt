@@ -1,0 +1,15 @@
+# ==============================================================================
+# EconVision - Robots.txt
+# https://econvision.vercel.app/
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Disallow internal scratch/build artifacts and node modules
+Disallow: /scratch/
+Disallow: /node_modules/
+Disallow: /browser/
+
+# Sitemap Location
+Sitemap: https://econvision.vercel.app/sitemap.xml
