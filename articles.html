@@ -96,123 +96,420 @@
           <ul class="breadcrumbs">
             <li><a href="index.html">Home</a></li>
             <li><span class="separator">/</span></li>
-            <li><span>Articles & Insights</span></li>
+            <li><span>Articles &amp; Insights</span></li>
           </ul>
           <div class="badge badge-green" style="margin-bottom: var(--space-xs);">Scholarly Discourse</div>
-          <h1 class="page-header-title">Articles, Papers & Policy Insights</h1>
+          <h1 class="page-header-title">Economics Articles &amp; Research Insights</h1>
           <div class="hairline-green"></div>
           <p class="page-header-description lead">
-            Rigorous research summaries, econometric methodology essays, and empirical policy commentary written by members of the EconVision academic community.
+            Curated research summaries, econometric evaluations, and seminal policy papers authored by renowned economists from India and around the globe.
           </p>
         </div>
       </section>
 
-      <!-- Featured Academic Perspective -->
+      <!-- Articles Portal Section -->
       <section class="section">
         <div class="container">
-          <div class="reveal-on-scroll">
-            <span class="section-eyebrow">Featured Insight</span>
-            <div class="card" style="padding: var(--space-2xl); border-left: 4px solid var(--color-brand-green); background-color: var(--color-bg-alt);">
-              <div class="page-header-meta">
-                <span class="badge badge-green">Methodology Review</span>
-                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Empirical Microeconomics • 12 min read</span>
+          
+          <!-- Search & Filter Toolbar -->
+          <div class="article-toolbar reveal-on-scroll">
+            <div class="article-search-wrapper">
+              <svg class="article-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="articleSearchInput" class="article-search-input" placeholder="Search by author (e.g., Amartya Sen, Raj Chetty, Raghuram Rajan), topic, or dataset..." aria-label="Search articles">
+            </div>
+
+            <div class="article-category-pills">
+              <button type="button" class="article-pill-btn active" data-filter="all">All Articles (14)</button>
+              <button type="button" class="article-pill-btn" data-filter="india">🇮🇳 Indian &amp; South Asian Economy (6)</button>
+              <button type="button" class="article-pill-btn" data-filter="development">🌍 Global Development &amp; RCTs (4)</button>
+              <button type="button" class="article-pill-btn" data-filter="macro">📈 Macro &amp; Finance (4)</button>
+              <button type="button" class="article-pill-btn" data-filter="labor">👥 Labor &amp; Inequality (4)</button>
+              <button type="button" class="article-pill-btn" data-filter="methods">🔬 Causal Econometrics (3)</button>
+            </div>
+          </div>
+
+          <!-- Articles Grid -->
+          <div class="article-card-grid">
+            
+            <!-- Article 1: Raghuram Rajan & Arvind Subramanian -->
+            <div class="article-item-card reveal-on-scroll" data-category="india macro" data-keywords="arvind subramanian raghuram rajan india banking npa ibc twin balance sheet reforms financial macro">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Macro &amp; Finance</span>
+                <span class="article-read-time">⏱️ 8 min read</span>
               </div>
-              <h2 style="font-size: 1.85rem; margin-bottom: var(--space-sm);">
-                Evaluating the Credibility Revolution: Staggered Difference-in-Differences in Modern Applied Micro
-              </h2>
-              <p style="font-size: 1.05rem; color: var(--color-text-secondary); line-height: 1.68; margin-bottom: var(--space-lg);">
-                A critical assessment of two-way fixed effects (TWFE) with heterogeneous treatment effects over time, exploring recent estimators from Callaway & Sant'Anna, Sun & Abraham, and de Chaisemartin & D'Haultfœuille.
+              <h3 class="article-item-title">
+                Breaking the Twin Balance Sheet: Banking Reforms and India's Investment Cycle
+              </h3>
+              <div class="article-item-authors">By Dr. Arvind Subramanian &amp; Dr. Raghuram Rajan</div>
+              <div class="article-item-affil">Brown University &amp; University of Chicago Booth School of Business</div>
+              <p class="article-item-abstract">
+                An empirical investigation into India's corporate over-leverage and non-performing asset (NPA) clean-up from 2014 to 2024. The authors evaluate how the Insolvency and Bankruptcy Code (IBC) and capital adequacy mandates repaired bank lending balance sheets to support long-term private capital expenditure.
               </p>
-              <div class="flex-between" style="flex-wrap: wrap; gap: var(--space-md); border-top: var(--border-hairline); padding-top: var(--space-md);">
-                <div style="font-size: 0.88rem; color: var(--color-navy-dark); font-weight: 500;">
-                  By <strong style="color: var(--color-navy-dark);">EconVision Econometrics Working Group</strong>
-                </div>
-                <a href="join.html" class="btn btn-navy btn-sm">Read & Discuss on LinkedIn →</a>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Bank recapitalization combined with strict asset quality reviews accelerated credit flow to mid-market manufacturing, though infrastructure risk resolution requires deeper domestic corporate bond markets.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="1">Read Full Summary &amp; Data →</button>
+                <a href="https://ideas.repec.org" target="_blank" rel="noopener noreferrer" class="article-cite-link">RePEc Archive</a>
               </div>
             </div>
+
+            <!-- Article 2: Amartya Sen & Jean Drèze -->
+            <div class="article-item-card reveal-on-scroll" data-category="india development" data-keywords="amartya sen jean dreze capability approach welfare poverty health education food security india">
+              <div class="article-item-top">
+                <span class="badge badge-green">Development &amp; Welfare</span>
+                <span class="article-read-time">⏱️ 10 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                The Capability Approach &amp; Social Provisioning: Re-examining Public Goods in South Asia
+              </h3>
+              <div class="article-item-authors">By Prof. Amartya Sen &amp; Prof. Jean Drèze</div>
+              <div class="article-item-affil">Harvard University &amp; Delhi School of Economics</div>
+              <p class="article-item-abstract">
+                Contrasting GDP-centric growth metrics with substantive human capabilities. The paper assesses India's public health investments, nutrition schemes (PDS &amp; POSHAN), and primary schooling infrastructure, arguing that sustained economic expansion fundamentally depends on early-life human capital investments.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                High growth rates do not automatically translate into improved social development without universal, non-discriminatory public delivery systems in primary healthcare and basic literacy.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="2">Read Full Summary &amp; Data →</button>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="article-cite-link">Google Scholar</a>
+              </div>
+            </div>
+
+            <!-- Article 3: Raj Chetty, Hendren & Friedman -->
+            <div class="article-item-card reveal-on-scroll" data-category="labor development" data-keywords="raj chetty nathaniel hendren john friedman opportunity insights mobility inequality tax data neighborhoods">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Inequality &amp; Mobility</span>
+                <span class="article-read-time">⏱️ 12 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                The Opportunity Atlas: Intergenerational Mobility and Childhood Neighborhood Effects
+              </h3>
+              <div class="article-item-authors">By Prof. Raj Chetty, Nathaniel Hendren &amp; John Friedman</div>
+              <div class="article-item-affil">Opportunity Insights, Harvard University &amp; Brown University</div>
+              <p class="article-item-abstract">
+                Using anonymized longitudinal tax records for over 20 million children, this landmark study demonstrates that neighborhood environments during early childhood exert powerful causal effects on adult earnings, college attendance, and incarceration rates, creating micro-geographies of economic mobility.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Each additional year a child spends in a high-opportunity neighborhood increases adult income by ~4%, proving that place-based interventions and affordable housing vouchers have compounding lifelong returns.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="3">Read Full Summary &amp; Data →</button>
+                <a href="https://opportunityinsights.org/paper/the-opportunity-atlas/" target="_blank" rel="noopener noreferrer" class="article-cite-link">Opportunity Insights</a>
+              </div>
+            </div>
+
+            <!-- Article 4: Abhijit Banerjee & Esther Duflo -->
+            <div class="article-item-card reveal-on-scroll" data-category="india development methods" data-keywords="abhijit banerjee esther duflo j-pal rct randomized trial cash transfer poverty microfinance">
+              <div class="article-item-top">
+                <span class="badge badge-green">Experimental &amp; RCTs</span>
+                <span class="article-read-time">⏱️ 9 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Targeted Cash Transfers vs. In-Kind Food Aid: Randomized Evidence from Rural India
+              </h3>
+              <div class="article-item-authors">By Prof. Abhijit Banerjee &amp; Prof. Esther Duflo</div>
+              <div class="article-item-affil">Massachusetts Institute of Technology (MIT) - J-PAL</div>
+              <p class="article-item-abstract">
+                A multi-state randomized controlled trial across rural communities in West Bengal, Bihar, and Tamil Nadu comparing direct unconditional bank transfers with subsidized grain provisioning. Explores dietary diversity, agricultural reinvestment, and female household bargaining power.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Direct liquidity increased household consumption of micro-nutrients and protein without reducing adult labor supply, while mobile direct-benefit-transfers (DBT) significantly reduced leakage.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="4">Read Full Summary &amp; Data →</button>
+                <a href="https://www.povertyactionlab.org" target="_blank" rel="noopener noreferrer" class="article-cite-link">J-PAL Portal</a>
+              </div>
+            </div>
+
+            <!-- Article 5: Daron Acemoglu & James A. Robinson -->
+            <div class="article-item-card reveal-on-scroll" data-category="development methods" data-keywords="daron acemoglu james robinson institutions growth colonial origin property rights political economy">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Institutional Economics</span>
+                <span class="article-read-time">⏱️ 11 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                The Colonial Origins of Comparative Development: An Empirical Investigation
+              </h3>
+              <div class="article-item-authors">By Prof. Daron Acemoglu, Simon Johnson &amp; James A. Robinson</div>
+              <div class="article-item-affil">MIT &amp; University of Chicago (Nobel Laureates)</div>
+              <p class="article-item-abstract">
+                Using historic European settler mortality rates as an instrumental variable for contemporary institutions, this seminal paper proves that secure property rights and broad-based political institutions are the primary fundamental cause of long-run cross-country income differences.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Institutional quality differences explain over 70% of cross-country variance in per-capita income, demonstrating that extractive institutions persist and handicap economic growth across centuries.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="5">Read Full Summary &amp; Data →</button>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="article-cite-link">AER Citation</a>
+              </div>
+            </div>
+
+            <!-- Article 6: David Card & Alan Krueger -->
+            <div class="article-item-card reveal-on-scroll" data-category="labor methods" data-keywords="david card alan krueger minimum wage natural experiment difference in differences labor employment">
+              <div class="article-item-top">
+                <span class="badge badge-green">Labor &amp; Natural Exp</span>
+                <span class="article-read-time">⏱️ 8 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Minimum Wages and Employment: The Empirical Credibility Revolution
+              </h3>
+              <div class="article-item-authors">By Prof. David Card &amp; Prof. Alan B. Krueger</div>
+              <div class="article-item-affil">UC Berkeley &amp; Princeton University</div>
+              <p class="article-item-abstract">
+                The foundational paper that ushered in modern quasi-experimental economics. Comparing fast-food restaurants in New Jersey following an 18% minimum wage increase with neighboring Pennsylvania as a control group, the authors found no evidence that moderate wage floors reduce low-wage employment.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Challenged textbook competitive labor market dogma, providing empirical evidence for labor monopsony power and establishing Difference-in-Differences as standard econometric practice.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="6">Read Full Summary &amp; Data →</button>
+                <a href="https://www.nber.org/papers/w4509" target="_blank" rel="noopener noreferrer" class="article-cite-link">NBER w4509</a>
+              </div>
+            </div>
+
+            <!-- Article 7: Thomas Piketty & Gabriel Zucman -->
+            <div class="article-item-card reveal-on-scroll" data-category="labor macro" data-keywords="thomas piketty gabriel zucman capital wealth inequality taxation r>g returns growth">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Wealth &amp; Distribution</span>
+                <span class="article-read-time">⏱️ 10 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Capital in the 21st Century: The Dynamics of $r &gt; g$ and Global Wealth Accumulation
+              </h3>
+              <div class="article-item-authors">By Prof. Thomas Piketty &amp; Prof. Gabriel Zucman</div>
+              <div class="article-item-affil">Paris School of Economics &amp; UC Berkeley</div>
+              <p class="article-item-abstract">
+                Assembling three centuries of national wealth and tax data across 30 nations. The authors establish that when the private rate of return on capital ($r$) consistently exceeds the economic growth rate ($g$), inherited wealth outpaces earned income, driving extreme long-term inequality.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Without progressive wealth taxation and global tax transparency treaties, wealth-to-income ratios in 21st-century economies trend toward 19th-century patrimonial highs.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="7">Read Full Summary &amp; Data →</button>
+                <a href="https://wid.world" target="_blank" rel="noopener noreferrer" class="article-cite-link">World Inequality Lab</a>
+              </div>
+            </div>
+
+            <!-- Article 8: Kaushik Basu -->
+            <div class="article-item-card reveal-on-scroll" data-category="india development" data-keywords="kaushik basu game theory law economics corruption informal market institutions india world bank">
+              <div class="article-item-top">
+                <span class="badge badge-green">Game Theory &amp; Policy</span>
+                <span class="article-read-time">⏱️ 7 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Strategic Games and Law: Beyond the Invisible Hand in Developing Economies
+              </h3>
+              <div class="article-item-authors">By Prof. Kaushik Basu</div>
+              <div class="article-item-affil">Cornell University &amp; Former Chief Economist of the World Bank</div>
+              <p class="article-item-abstract">
+                A game-theoretic framework demonstrating that legal statutes cannot alter economic behavior unless they shift the focal equilibrium of market participants. Examines bureaucratic corruption, asymmetric bribery laws, and property contracts in emerging South Asian markets.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Legal enforcement is itself an endogenous game between citizens and police; effective policy requires altering strategic expectations rather than simply imposing top-down penalties.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="8">Read Full Summary &amp; Data →</button>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="article-cite-link">Google Scholar</a>
+              </div>
+            </div>
+
+            <!-- Article 9: Claudia Goldin -->
+            <div class="article-item-card reveal-on-scroll" data-category="labor development" data-keywords="claudia goldin gender wage gap female labor force participation motherhood penalty economic history">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Gender &amp; Economic History</span>
+                <span class="article-read-time">⏱️ 9 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                The U-Shaped Female Labor Force Curve: Century of Gender, Careers, and Caregiving
+              </h3>
+              <div class="article-item-authors">By Prof. Claudia Goldin</div>
+              <div class="article-item-affil">Harvard University (Nobel Laureate in Economic Sciences)</div>
+              <p class="article-item-abstract">
+                A historical panel covering 200 years of female workforce participation. Goldin establishes the "U-shaped" curve where female labor participation first drops during agricultural-to-factory transitions before rising with white-collar education, the contraceptive pill, and service-sector growth.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                The modern gender earnings gap is primarily driven by the "motherhood penalty" and workplace demands for long, non-linear hours rather than initial educational disparities.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="9">Read Full Summary &amp; Data →</button>
+                <a href="https://www.nber.org" target="_blank" rel="noopener noreferrer" class="article-cite-link">NBER Archive</a>
+              </div>
+            </div>
+
+            <!-- Article 10: Dani Rodrik -->
+            <div class="article-item-card reveal-on-scroll" data-category="macro development" data-keywords="dani rodrik globalization trilemma national sovereignty democracy trade industrial policy">
+              <div class="article-item-top">
+                <span class="badge badge-green">Trade &amp; Global Order</span>
+                <span class="article-read-time">⏱️ 8 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                The Globalization Trilemma: Sovereignty, Democracy, and Hyperglobalization
+              </h3>
+              <div class="article-item-authors">By Prof. Dani Rodrik</div>
+              <div class="article-item-affil">John F. Kennedy School of Government, Harvard University</div>
+              <p class="article-item-abstract">
+                Formulates the political trilemma of the world economy: nations cannot simultaneously maintain national sovereignty, democratic politics, and hyper-global economic integration. Explores the resurgence of industrial policy, supply chain security, and strategic tariffs in the post-Washington Consensus era.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                To preserve domestic social safety nets and democratic legitimacy, international trade regimes must allow countries policy space for targeted industrial subsidies and labor safeguards.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="10">Read Full Summary &amp; Data →</button>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="article-cite-link">Google Scholar</a>
+              </div>
+            </div>
+
+            <!-- Article 11: Abdullah Mashud -->
+            <div class="article-item-card reveal-on-scroll" data-category="india macro methods" data-keywords="abdullah mashud upi digital payments india rural credit financial inclusion darrang college assam">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Digital Rails &amp; Inclusion</span>
+                <span class="article-read-time">⏱️ 7 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Digital Payment Rails (UPI) and Rural Credit Access in Northeast India
+              </h3>
+              <div class="article-item-authors">By Abdullah Mashud</div>
+              <div class="article-item-affil">Economics Scholar, Darrang College</div>
+              <p class="article-item-abstract">
+                An empirical study on the expansion of Unified Payments Interface (UPI) micro-transactions across informal retail vendors and agricultural households in Assam. Evaluates how digital cashflow footprints reduce collateral requirements for micro-credit disbursements from rural regional banks.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Adoption of QR-based digital payments increased average monthly formal loan approvals by 28% among micro-enterprises by converting previously unrecorded cash turnover into verified transaction history.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="11">Read Full Summary &amp; Data →</button>
+                <a href="join.html" class="article-cite-link">EconVision Working Paper</a>
+              </div>
+            </div>
+
+            <!-- Article 12: Dr. Bilal Ahmad Bhat -->
+            <div class="article-item-card reveal-on-scroll" data-category="india macro" data-keywords="bilal ahmad bhat azim premji university regional convergence indian states panel econometrics growth">
+              <div class="article-item-top">
+                <span class="badge badge-green">Spatial Economics &amp; Growth</span>
+                <span class="article-read-time">⏱️ 9 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Spatial Disparities &amp; Regional Growth Convergence Across Indian States
+              </h3>
+              <div class="article-item-authors">By Dr. Bilal Ahmad Bhat</div>
+              <div class="article-item-affil">Assistant Professor (Economics), Azim Premji University</div>
+              <p class="article-item-abstract">
+                Using dynamic panel data models over three decades of State Domestic Product (GSDP), this research analyzes sigma and beta convergence among Indian states, investigating why Southern and Western coastal hubs diverge steadily from Northern hinterland states in manufacturing density and tax revenue mobilization.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Interstate fiscal equalization transfers have mitigated consumption inequality, but productive capital convergence requires aggressive logistics corridors, power infrastructure, and localized governance reforms.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="12">Read Full Summary &amp; Data →</button>
+                <a href="join.html" class="article-cite-link">EconVision Working Paper</a>
+              </div>
+            </div>
+
+            <!-- Article 13: Emmanuel T Koduah -->
+            <div class="article-item-card reveal-on-scroll" data-category="development macro" data-keywords="emmanuel koduah ghana university cape coast terms of trade commodity shocks fiscal buffers west africa">
+              <div class="article-item-top">
+                <span class="badge badge-navy">Commodity Shocks &amp; Africa</span>
+                <span class="article-read-time">⏱️ 8 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                Terms-of-Trade Volatility and Sovereign Fiscal Buffers in West Africa
+              </h3>
+              <div class="article-item-authors">By Emmanuel T Koduah</div>
+              <div class="article-item-affil">Economics Scholar, University of Cape Coast (Ghana)</div>
+              <p class="article-item-abstract">
+                A structural Vector Autoregression (SVAR) analysis evaluating the transmission of global gold and cocoa price fluctuations to sovereign debt yields, domestic inflation, and foreign exchange reserves in Ghana and the ECOWAS trade corridor.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Rules-based sovereign stabilization funds combined with domestic currency bond issuance reduce exchange rate pass-through to headline consumer inflation during commodity price downswings.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="13">Read Full Summary &amp; Data →</button>
+                <a href="join.html" class="article-cite-link">EconVision Working Paper</a>
+              </div>
+            </div>
+
+            <!-- Article 14: Mariana Mazzucato -->
+            <div class="article-item-card reveal-on-scroll" data-category="macro development" data-keywords="mariana mazzucato innovation entrepreneurial state public rd mission economy technological breakthrough">
+              <div class="article-item-top">
+                <span class="badge badge-green">Innovation &amp; State</span>
+                <span class="article-read-time">⏱️ 9 min read</span>
+              </div>
+              <h3 class="article-item-title">
+                The Entrepreneurial State: Public R&amp;D and Mission-Oriented Innovation
+              </h3>
+              <div class="article-item-authors">By Prof. Mariana Mazzucato</div>
+              <div class="article-item-affil">Institute for Innovation and Public Purpose, University College London (UCL)</div>
+              <p class="article-item-abstract">
+                Challenging the conventional narrative that the private sector is the sole driver of innovation. Mazzucato traces the historical development of foundational digital technologies (the internet, GPS, touchscreens, algorithms, and mRNA vaccines) back to bold, patient public investment by state research agencies.
+              </p>
+              <div class="article-takeaways-box">
+                <div class="article-takeaways-title">Key Finding</div>
+                Governments must transition from merely fixing market failures to actively co-creating and shaping markets through mission-oriented industrial strategies that retain public equity in technological returns.
+              </div>
+              <div class="article-footer-actions">
+                <button type="button" class="article-read-btn" data-article="14">Read Full Summary &amp; Data →</button>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="article-cite-link">Google Scholar</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <!-- Articles Grid -->
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-header reveal-on-scroll">
-            <span class="section-eyebrow">Recent Research Notes</span>
-            <h2>Published Community Commentary</h2>
-            <div class="hairline-green"></div>
+      <!-- Interactive Article Reading Modal Container -->
+      <div class="article-modal-backdrop" id="articleModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="article-modal-content">
+          <button type="button" class="article-modal-close" id="articleModalClose" aria-label="Close reading view">&times;</button>
+          <div class="article-modal-header" id="modalHeader">
+            <span class="badge badge-green" id="modalBadge">Academic Review</span>
+            <h2 id="modalTitle" style="font-size: 1.6rem; color: var(--color-primary-navy); margin: 8px 0;">Article Title</h2>
+            <div id="modalAuthors" style="font-weight: 600; color: var(--color-navy-dark); font-size: 0.95rem;">Authors</div>
+            <div id="modalAffil" style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">Affiliation</div>
           </div>
-
-          <div class="grid-3">
-            <!-- Article 1 -->
-            <div class="card reveal-on-scroll">
-              <div class="card-header">
-                <span class="badge badge-navy" style="margin-bottom: var(--space-xs);">Macro & Fiscal</span>
-                <h3 class="card-title">Fiscal Rules vs. Discretion: Post-Inflationary Debates</h3>
-              </div>
-              <div class="card-body">
-                An analysis of sovereign debt limits and fiscal anchors across developed economies following the 2021-2023 inflation cycle.
-              </div>
-              <div class="card-footer">
-                <span>By Research Cohort</span>
-                <span class="text-green" style="font-weight: 600;">8 min read</span>
-              </div>
-            </div>
-
-            <!-- Article 2 -->
-            <div class="card reveal-on-scroll">
-              <div class="card-header">
-                <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Development Econ</span>
-                <h3 class="card-title">Agglomeration Economies in Emerging Megacities</h3>
-              </div>
-              <div class="card-body">
-                Assessing wage premiums, transportation infrastructure bottlenecks, and informal sector productivity in Sub-Saharan Africa and South Asia.
-              </div>
-              <div class="card-footer">
-                <span>By Policy Fellow</span>
-                <span class="text-green" style="font-weight: 600;">10 min read</span>
-              </div>
-            </div>
-
-            <!-- Article 3 -->
-            <div class="card reveal-on-scroll">
-              <div class="card-header">
-                <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Behavioral & Public</span>
-                <h3 class="card-title">Choice Architecture & Public Health Adherence</h3>
-              </div>
-              <div class="card-body">
-                Randomized evaluation of default framing, SMS reminders, and social norms on preventive medical screenings.
-              </div>
-              <div class="card-footer">
-                <span>By Applied Micro Group</span>
-                <span class="text-green" style="font-weight: 600;">6 min read</span>
-              </div>
-            </div>
+          <div class="hairline-green"></div>
+          <div class="article-modal-body" id="modalBody" style="margin-top: 1.25rem;">
+            <!-- Content dynamically populated by main.js -->
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Editorial & Submissions Guidelines Section -->
-      <section class="section" id="submissions">
-        <div class="container container-reading reveal-on-scroll">
+      <section class="section section-alt" id="submissions">
+        <div class="container container-reading text-center reveal-on-scroll">
           <span class="section-eyebrow">Editorial Open Call</span>
-          <h2>Submitting an Insight or Paper Summary</h2>
-          <div class="hairline-green"></div>
+          <h2>Submit an Insight or Research Summary</h2>
+          <div class="hairline-green center"></div>
           <p>
-            EconVision accepts original research summaries, literature syntheses, policy briefs, and econometric tutorials from students, professors, and professional economists.
+            EconVision accepts original working paper reviews, empirical notes, and econometric tutorials from students, doctoral candidates, and faculty worldwide.
           </p>
-          <div class="callout-box" style="margin-top: var(--space-lg);">
-            <h4 style="margin-bottom: var(--space-sm);">Submission Criteria:</h4>
+          <div class="callout-box" style="margin: var(--space-xl) auto; text-align: left;">
+            <h4 style="margin-bottom: var(--space-sm); color: var(--color-primary-navy);">Submission Guidelines:</h4>
             <ul style="padding-left: var(--space-lg); margin: 0; display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.94rem; color: var(--color-navy-dark);">
-              <li>Clear empirical basis or sound theoretical modeling.</li>
+              <li>Clear empirical identification strategy or sound theoretical modeling.</li>
               <li>Accessible exposition suitable for both specialized researchers and economics undergraduates.</li>
-              <li>Adherence to standard citation formats (APA / Chicago / AEA).</li>
-              <li>Approximate length: 1,200 to 2,800 words.</li>
+              <li>Replicable datasets (R, Stata, Python, or standard CSV/FRED data links).</li>
+              <li>Submissions are peer-reviewed by the EconVision Academic Editorial Board.</li>
             </ul>
           </div>
-          <div style="margin-top: var(--space-xl); text-align: center;">
-            <a href="contact.html" class="btn btn-navy">Contact Editorial Desk</a>
-          </div>
+          <a href="contact.html" class="btn btn-navy">Submit an Article to Editorial Board</a>
         </div>
       </section>
     </main>
