@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRegistrationForm();
   initContactForm();
   initBackToTop();
+  initResourceFilter();
 });
 
 /**
@@ -425,4 +426,64 @@ function initBackToTop() {
       behavior: 'smooth'
     });
   });
+}
+
+/**
+ * 9. Interactive Resource Directory Search & Category Filter
+ */
+function initResourceFilter() {
+  const searchInput = document.getElementById('resourceSearchInput');
+  const pillBtns = document.querySelectorAll('.resource-pill-btn');
+  const resourceCards = document.querySelectorAll('.resource-item-card');
+  const sectionBlocks = document.querySelectorAll('.resource-section-block');
+
+  if (!resourceCards.length) return;
+
+  let activeCategory = 'all';
+  let searchTerm = '';
+
+  function applyFilter() {
+    resourceCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category') || '';
+      const cardKeywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+      const cardText = (card.textContent || '').toLowerCase();
+
+      const matchesCategory = (activeCategory === 'all') || (cardCategory === activeCategory);
+      const matchesSearch = !searchTerm || cardKeywords.includes(searchTerm) || cardText.includes(searchTerm);
+
+      if (matchesCategory && matchesSearch) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Hide/show section blocks based on visible cards inside them
+    sectionBlocks.forEach(section => {
+      const visibleCards = section.querySelectorAll('.resource-item-card[style*="display: flex"], .resource-item-card:not([style*="display: none"])');
+      let count = 0;
+      section.querySelectorAll('.resource-item-card').forEach(c => {
+        if (c.style.display !== 'none') count++;
+      });
+      section.style.display = count > 0 ? 'block' : 'none';
+    });
+  }
+
+  // Pill click handler
+  pillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pillBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.getAttribute('data-filter') || 'all';
+      applyFilter();
+    });
+  });
+
+  // Search input handler
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchTerm = e.target.value.trim().toLowerCase();
+      applyFilter();
+    });
+  }
 }

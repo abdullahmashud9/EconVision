@@ -2138,6 +2138,204 @@ textarea.form-control {
   }
 }
 
+/* ==========================================================================
+   Comprehensive Resource Hub Styles
+   ========================================================================== */
+.resource-toolbar {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.resource-search-wrapper {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.resource-search-input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.85rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-alt);
+  color: var(--color-navy-dark);
+  font-family: inherit;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.resource-search-input:focus {
+  outline: none;
+  border-color: var(--color-accent-green);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(110, 163, 93, 0.15);
+}
+
+.resource-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.resource-category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resource-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 999px;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-subtle);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.resource-pill-btn:hover, .resource-pill-btn.active {
+  background-color: var(--color-navy-dark);
+  color: #FFFFFF;
+  border-color: var(--color-navy-dark);
+}
+
+.resource-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.resource-item-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.resource-item-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent-green);
+  box-shadow: var(--shadow-md);
+}
+
+.resource-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: var(--space-sm);
+}
+
+.resource-item-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary-navy);
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.resource-item-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.resource-item-title a:hover {
+  color: var(--color-accent-green);
+}
+
+.resource-item-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+.resource-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-lg);
+}
+
+.resource-tag {
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: var(--color-bg-alt);
+  color: var(--color-navy-dark);
+}
+
+.resource-tag-google {
+  background-color: #E8F0FE;
+  color: #1A73E8;
+}
+
+.resource-tag-green {
+  background-color: rgba(110, 163, 93, 0.12);
+  color: #437135;
+}
+
+.resource-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-accent-green);
+  text-decoration: none;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.resource-action-link:hover {
+  color: var(--color-brand-blue-dark);
+  transform: translateX(3px);
+}
+
+.resource-action-link svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+@media (max-width: 1024px) {
+  .resource-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .resource-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 

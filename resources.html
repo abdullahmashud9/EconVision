@@ -99,150 +99,706 @@
             <li><span>Resources</span></li>
           </ul>
           <div class="badge badge-green" style="margin-bottom: var(--space-xs);">Academic Repository</div>
-          <h1 class="page-header-title">Academic Resources & Toolkits</h1>
+          <h1 class="page-header-title">Economics Resources &amp; Research Hub</h1>
           <div class="hairline-green"></div>
           <p class="page-header-description lead">
-            Curated datasets, econometrics toolkits, graduate school syllabi, and essential economic literature for students, researchers, and practitioners.
+            A comprehensive, curated directory of literature search engines, Google Scholar tools, open empirical datasets, causal econometrics libraries, and graduate school portals.
           </p>
         </div>
       </section>
 
-      <!-- Resource Categories Grid -->
+      <!-- Resource Categories & Interactive Search -->
       <section class="section">
         <div class="container">
-          <!-- Section 1: Datasets -->
-          <div style="margin-bottom: var(--space-3xl);">
+          
+          <!-- Search & Filter Toolbar -->
+          <div class="resource-toolbar reveal-on-scroll">
+            <div class="resource-search-wrapper">
+              <svg class="resource-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="resourceSearchInput" class="resource-search-input" placeholder="Search resources, datasets, Google Scholar, econometrics tools, or topics (e.g., FRED, Python, Pre-doc)..." aria-label="Search resources">
+            </div>
+
+            <div class="resource-category-pills">
+              <button type="button" class="resource-pill-btn active" data-filter="all">All Resources (27)</button>
+              <button type="button" class="resource-pill-btn" data-filter="literature">📚 Google &amp; Literature (6)</button>
+              <button type="button" class="resource-pill-btn" data-filter="datasets">📊 Open Datasets (10)</button>
+              <button type="button" class="resource-pill-btn" data-filter="econometrics">💻 Econometrics &amp; Code (6)</button>
+              <button type="button" class="resource-pill-btn" data-filter="career">🎓 Grad School &amp; Careers (5)</button>
+            </div>
+          </div>
+
+          <!-- Section 1: Literature Engines & Google Scholar -->
+          <div class="resource-section-block" id="cat-literature" style="margin-bottom: var(--space-3xl);">
             <div class="reveal-on-scroll">
               <span class="section-eyebrow">Category 01</span>
-              <h2>Core Economic Datasets & Repositories</h2>
+              <h2>Literature Discovery &amp; Google Scholar</h2>
               <div class="hairline-green"></div>
-              <p style="margin-bottom: var(--space-lg);">Essential open-access empirical repositories for macroeconomic, labor, and cross-country empirical modeling.</p>
+              <p style="margin-bottom: var(--space-lg);">Essential bibliographic databases, working paper preprints, and citation indexes for economic research.</p>
             </div>
 
-            <div class="grid-3">
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-navy" style="margin-bottom: var(--space-xs);">Macro & Rates</span>
-                  <h3 class="card-title">FRED (Federal Reserve Economic Data)</h3>
+            <div class="resource-card-grid">
+              <!-- 1. Google Scholar -->
+              <div class="resource-item-card reveal-on-scroll" data-category="literature" data-keywords="google scholar search papers citations articles literature review pdf download">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Search Engine</span>
+                  <span class="resource-tag resource-tag-google">Google Tool</span>
                 </div>
-                <div class="card-body">
-                  Over 800,000 international and US time series covering inflation, interest rates, employment, and industrial indices.
+                <h3 class="resource-item-title">
+                  <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                </h3>
+                <p class="resource-item-desc">
+                  The primary search engine for academic articles, working papers, theses, books, and court opinions across all fields of economics and policy.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Citations</span>
+                  <span class="resource-tag">Full-Text PDF</span>
+                  <span class="resource-tag">BibTeX Export</span>
                 </div>
-                <div class="card-footer">
-                  <span class="text-green" style="font-weight: 600;">St. Louis Fed API</span>
-                </div>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Explore Google Scholar</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
 
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Development & Trade</span>
-                  <h3 class="card-title">World Bank Open Data</h3>
+              <!-- 2. NBER Working Papers -->
+              <div class="resource-item-card reveal-on-scroll" data-category="literature" data-keywords="nber national bureau economic research working papers preprints macro labor public finance">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Preprint Archive</span>
+                  <span class="resource-tag">Top Tier</span>
                 </div>
-                <div class="card-body">
-                  Global development indicators, poverty metrics, climate statistics, and international trade flow records.
+                <h3 class="resource-item-title">
+                  <a href="https://www.nber.org/papers" target="_blank" rel="noopener noreferrer">NBER Working Papers</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Pre-publication working papers from leading economists covering macroeconomic policy, labor dynamics, international trade, and asset pricing.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Working Papers</span>
+                  <span class="resource-tag">Applied Micro</span>
+                  <span class="resource-tag">Macro Policy</span>
                 </div>
-                <div class="card-footer">
-                  <span class="text-green" style="font-weight: 600;">Global Metrics</span>
-                </div>
+                <a href="https://www.nber.org/papers" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Browse NBER Papers</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
 
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Growth & Productivity</span>
-                  <h3 class="card-title">Penn World Table (PWT)</h3>
+              <!-- 3. RePEc & IDEAS -->
+              <div class="resource-item-card reveal-on-scroll" data-category="literature" data-keywords="repec ideas open access bibliography papers journals rankings citations">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Open Bibliography</span>
+                  <span class="resource-tag">Open Access</span>
                 </div>
-                <div class="card-body">
-                  Standard cross-country panel data for real GDP, capital stock, total factor productivity (TFP), and purchasing power parities.
+                <h3 class="resource-item-title">
+                  <a href="https://ideas.repec.org" target="_blank" rel="noopener noreferrer">RePEc / IDEAS Database</a>
+                </h3>
+                <p class="resource-item-desc">
+                  The world's largest open bibliographic repository with over 4.5 million economics research items, journal rankings, author profiles, and institutional listings.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">4.5M+ Papers</span>
+                  <span class="resource-tag">Author Rankings</span>
+                  <span class="resource-tag">Global Index</span>
                 </div>
-                <div class="card-footer">
-                  <span class="text-green" style="font-weight: 600;">Panel Data</span>
+                <a href="https://ideas.repec.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Search RePEc IDEAS</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 4. CEPR Discussion Papers -->
+              <div class="resource-item-card reveal-on-scroll" data-category="literature" data-keywords="cepr centre economic policy research europe discussion papers central banking">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">European Policy</span>
+                  <span class="resource-tag">Policy Focus</span>
                 </div>
+                <h3 class="resource-item-title">
+                  <a href="https://cepr.org/publications/discussion-papers" target="_blank" rel="noopener noreferrer">CEPR Discussion Papers</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Leading European research network papers addressing international macro, monetary unions, fiscal frameworks, and industrial organization.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">European Policy</span>
+                  <span class="resource-tag">Monetary Policy</span>
+                  <span class="resource-tag">Financial Stability</span>
+                </div>
+                <a href="https://cepr.org/publications/discussion-papers" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Visit CEPR Network</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 5. arXiv Economics -->
+              <div class="resource-item-card reveal-on-scroll" data-category="literature" data-keywords="arxiv economics econometrics micro theory quantitative math preprints open access">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Open Preprints</span>
+                  <span class="resource-tag">Cornell arXiv</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://arxiv.org/archive/econ" target="_blank" rel="noopener noreferrer">arXiv Economics (econ)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Pre-print repository covering Econometrics (econ.EM), General Economics (econ.GN), and Theoretical Economics (econ.TH) hosted by Cornell University.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Econometric Theory</span>
+                  <span class="resource-tag">Math Econ</span>
+                  <span class="resource-tag">Fast Distribution</span>
+                </div>
+                <a href="https://arxiv.org/archive/econ" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Explore arXiv Econ</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 6. SSRN Economics Research Network -->
+              <div class="resource-item-card reveal-on-scroll" data-category="literature" data-keywords="ssrn elsevier early research working papers finance applied economics">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Research Network</span>
+                  <span class="resource-tag">Pre-Prints</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.ssrn.com/en/index.cfm/ern/" target="_blank" rel="noopener noreferrer">SSRN Economics (ERN)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Extensive early-stage research repository facilitating collaboration between academics and practitioners across finance, econometrics, and policy.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Early Papers</span>
+                  <span class="resource-tag">Finance &amp; Banking</span>
+                  <span class="resource-tag">Author Downloads</span>
+                </div>
+                <a href="https://www.ssrn.com/en/index.cfm/ern/" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Search SSRN ERN</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Section 2: Econometric Toolkits -->
-          <div style="margin-bottom: var(--space-3xl);">
+          <!-- Section 2: Core Datasets & Google Dataset Search -->
+          <div class="resource-section-block" id="cat-datasets" style="margin-bottom: var(--space-3xl);">
             <div class="reveal-on-scroll">
               <span class="section-eyebrow">Category 02</span>
-              <h2>Econometrics & Computation Packages</h2>
+              <h2>Global Datasets &amp; Google Dataset Search</h2>
               <div class="hairline-green"></div>
-              <p style="margin-bottom: var(--space-lg);">Modern computational workflows for applied micro, structural macro, and causal inference.</p>
+              <p style="margin-bottom: var(--space-lg);">Essential open-access empirical repositories for macroeconomic, micro-level survey, and international trade analysis.</p>
             </div>
 
-            <div class="grid-3">
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-navy" style="margin-bottom: var(--space-xs);">R Programming</span>
-                  <h3 class="card-title">Causal Inference with `fixest` & `did`</h3>
+            <div class="resource-card-grid">
+              <!-- 7. Google Dataset Search -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="google dataset search data repository find datasets machine learning census surveys">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Search Engine</span>
+                  <span class="resource-tag resource-tag-google">Google Tool</span>
                 </div>
-                <div class="card-body">
-                  High-performance fixed effects regression and modern difference-in-differences estimators with staggered rollouts.
+                <h3 class="resource-item-title">
+                  <a href="https://datasetsearch.research.google.com" target="_blank" rel="noopener noreferrer">Google Dataset Search</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Google's dedicated engine indexing tens of thousands of datasets across academic institutions, government portals, and international organizations.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Universal Search</span>
+                  <span class="resource-tag">Schema.org Data</span>
+                  <span class="resource-tag">Multi-Format</span>
                 </div>
-                <div class="card-footer">
-                  <span class="text-navy" style="font-weight: 600;">R Package</span>
-                </div>
+                <a href="https://datasetsearch.research.google.com" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Open Google Dataset Search</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
 
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Python / Stata</span>
-                  <h3 class="card-title">PyEcon & Replication Suites</h3>
+              <!-- 8. FRED (St. Louis Fed) -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="fred federal reserve st louis economic data time series inflation interest rates gdp api">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Macro &amp; Rates</span>
+                  <span class="resource-tag">820k+ Series</span>
                 </div>
-                <div class="card-body">
-                  Scripts and best practices for creating transparent replication files for top AEA and NBER publications.
+                <h3 class="resource-item-title">
+                  <a href="https://fred.stlouisfed.org" target="_blank" rel="noopener noreferrer">FRED (Federal Reserve Economic Data)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Over 820,000 international and US time series covering inflation, interest rates, employment, and industrial production with full API support in Python, R, and Stata.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Macro Time Series</span>
+                  <span class="resource-tag">API Integration</span>
+                  <span class="resource-tag">Free Access</span>
                 </div>
-                <div class="card-footer">
-                  <span class="text-green" style="font-weight: 600;">Open Source</span>
-                </div>
+                <a href="https://fred.stlouisfed.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Access FRED Database</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
 
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Macro Modeling</span>
-                  <h3 class="card-title">Dynare & DSGE Toolkits</h3>
+              <!-- 9. World Bank Open Data -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="world bank development indicators poverty education health wdi cross country">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Development &amp; Poverty</span>
+                  <span class="resource-tag">Global Coverage</span>
                 </div>
-                <div class="card-body">
-                  Standard software platform for solving, simulating, and estimating dynamic stochastic general equilibrium models.
+                <h3 class="resource-item-title">
+                  <a href="https://data.worldbank.org" target="_blank" rel="noopener noreferrer">World Bank Open Data</a>
+                </h3>
+                <p class="resource-item-desc">
+                  World Development Indicators (WDI), poverty headcount, education indices, climate statistics, and global financial governance panel data for over 200 countries.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">WDI Metrics</span>
+                  <span class="resource-tag">Country Panels</span>
+                  <span class="resource-tag">R / Python APIs</span>
                 </div>
-                <div class="card-footer">
-                  <span class="text-green" style="font-weight: 600;">Macro Modeling</span>
+                <a href="https://data.worldbank.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Visit World Bank Data</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 10. IMF Data Portal -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="imf international monetary fund weo balance of payments exchange rates inflation fiscal">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Monetary &amp; Fiscal</span>
+                  <span class="resource-tag">Global Finance</span>
                 </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.imf.org/en/Data" target="_blank" rel="noopener noreferrer">IMF Data Portal &amp; WEO</a>
+                </h3>
+                <p class="resource-item-desc">
+                  World Economic Outlook forecasts, International Financial Statistics (IFS), balance of payments, government finance statistics, and exchange rate indices.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">WEO Projections</span>
+                  <span class="resource-tag">Financial Stats</span>
+                  <span class="resource-tag">Fiscal Monitor</span>
+                </div>
+                <a href="https://www.imf.org/en/Data" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Explore IMF Data</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 11. OECD Data Explorer -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="oecd labor markets tax wages pensions productivity education cross country">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Labor &amp; Taxation</span>
+                  <span class="resource-tag">Cross-Country</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://data.oecd.org" target="_blank" rel="noopener noreferrer">OECD Data Explorer</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Detailed cross-country comparisons on labor markets, tax wedges, healthcare expenditure, education attainment (PISA), and structural indicators.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Labor Statistics</span>
+                  <span class="resource-tag">Tax Policy</span>
+                  <span class="resource-tag">PISA Benchmarks</span>
+                </div>
+                <a href="https://data.oecd.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Browse OECD Data</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 12. Penn World Table -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="pwt penn world table groningen real gdp capital stock tfp productivity purchasing power parity">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Growth &amp; TFP</span>
+                  <span class="resource-tag">PWT 10.01</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.rug.nl/ggdc/productivity/pwt/" target="_blank" rel="noopener noreferrer">Penn World Table (PWT)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  The gold standard for cross-country long-run growth regressions, purchasing power parity (PPP), total factor productivity (TFP), and capital stock estimation.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Real GDP / PPP</span>
+                  <span class="resource-tag">TFP Estimates</span>
+                  <span class="resource-tag">Capital Stocks</span>
+                </div>
+                <a href="https://www.rug.nl/ggdc/productivity/pwt/" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Download PWT Data</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 13. UN Comtrade -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="un comtrade international trade exports imports tariffs bilateral trade matrices">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">International Trade</span>
+                  <span class="resource-tag">Trade Flows</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://comtradeplus.un.org" target="_blank" rel="noopener noreferrer">UN Comtrade Database</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Comprehensive bilateral trade data covering annual and monthly import/export flows categorized by HS and SITC codes across 200+ economies.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Bilateral Trade</span>
+                  <span class="resource-tag">HS / SITC Codes</span>
+                  <span class="resource-tag">Gravity Models</span>
+                </div>
+                <a href="https://comtradeplus.un.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Search UN Comtrade</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 14. Our World in Data -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="our world in data oxford poverty climate energy demographics health visual charts open data">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Global Trends</span>
+                  <span class="resource-tag">Open Data</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://ourworldindata.org" target="_blank" rel="noopener noreferrer">Our World in Data (Oxford)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Interactive charts and open CSV/API data investigating poverty, energy transitions, demographic shifts, health outcomes, and environmental economics.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Interactive Charts</span>
+                  <span class="resource-tag">Clean CSVs</span>
+                  <span class="resource-tag">Oxford University</span>
+                </div>
+                <a href="https://ourworldindata.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Explore Our World in Data</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 15. IPUMS International & USA -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="ipums census microdata surveys minnesota population labor household micro data">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Census Microdata</span>
+                  <span class="resource-tag">Micro Econometrics</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.ipums.org" target="_blank" rel="noopener noreferrer">IPUMS Microdata Hub</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Harmonized individual- and household-level census and survey microdata from over 100 countries, indispensable for labor and demographic economics.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Individual Records</span>
+                  <span class="resource-tag">CPS &amp; ACS Surveys</span>
+                  <span class="resource-tag">Harmonized Panels</span>
+                </div>
+                <a href="https://www.ipums.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Access IPUMS Microdata</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 16. Opportunity Insights (Raj Chetty Lab) -->
+              <div class="resource-item-card reveal-on-scroll" data-category="datasets" data-keywords="opportunity insights raj chetty harvard mobility inequality neighborhoods public data">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Economic Mobility</span>
+                  <span class="resource-tag">Harvard Lab</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://opportunityinsights.org/data/" target="_blank" rel="noopener noreferrer">Opportunity Insights Data</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Publicly released anonymized datasets on upward income mobility, neighborhood effects, college admissions, and local economic resilience.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Mobility Atlas</span>
+                  <span class="resource-tag">Tract-Level Data</span>
+                  <span class="resource-tag">Policy Evidence</span>
+                </div>
+                <a href="https://opportunityinsights.org/data/" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Get Mobility Datasets</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Section 3: Graduate School & Career -->
-          <div>
+          <!-- Section 3: Econometrics & Computational Tools -->
+          <div class="resource-section-block" id="cat-econometrics" style="margin-bottom: var(--space-3xl);">
             <div class="reveal-on-scroll">
               <span class="section-eyebrow">Category 03</span>
-              <h2>Academic & Career Guides</h2>
+              <h2>Econometrics, Code &amp; Free Textbooks</h2>
               <div class="hairline-green"></div>
-              <p style="margin-bottom: var(--space-lg);">Guidance for pre-doctoral fellowships, PhD applications, and academic publishing.</p>
+              <p style="margin-bottom: var(--space-lg);">State-of-the-art causal inference guides, open textbooks, and computational toolkits in R, Stata, and Python.</p>
             </div>
 
-            <div class="grid-2">
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Graduate Admissions</span>
-                  <h3 class="card-title">Economics PhD Roadmap & Math Preparation</h3>
+            <div class="resource-card-grid">
+              <!-- 17. Causal Inference: The Mixtape -->
+              <div class="resource-item-card reveal-on-scroll" data-category="econometrics" data-keywords="causal inference mixtape scott cunningham open textbook did iv synthetic control r stata python">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Open Textbook</span>
+                  <span class="resource-tag">Free Online</span>
                 </div>
-                <div class="card-body">
-                  A comprehensive overview of coursework (Real Analysis, Linear Algebra, Mathematical Statistics) and pre-doc research experience necessary for top programs.
+                <h3 class="resource-item-title">
+                  <a href="https://mixtape.scunning.com" target="_blank" rel="noopener noreferrer">Causal Inference: The Mixtape</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Scott Cunningham's renowned open textbook covering DAGs, matching, instrument variables, panel fixed effects, DiD, and synthetic control with complete R, Stata, and Python code.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">DAGs &amp; Matching</span>
+                  <span class="resource-tag">Synthetic Control</span>
+                  <span class="resource-tag">R / Stata / Python</span>
                 </div>
+                <a href="https://mixtape.scunning.com" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Read The Mixtape Free</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
 
-              <div class="card reveal-on-scroll">
-                <div class="card-header">
-                  <span class="badge badge-navy" style="margin-bottom: var(--space-xs);">Publishing & Writing</span>
-                  <h3 class="card-title">Scholarly Paper Writing & Rebuttal Guide</h3>
+              <!-- 18. The Effect (Nick Huntington-Klein) -->
+              <div class="resource-item-card reveal-on-scroll" data-category="econometrics" data-keywords="the effect nick huntington klein research design causality regression discontinuity open book">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Research Design</span>
+                  <span class="resource-tag">Free Online</span>
                 </div>
-                <div class="card-body">
-                  Best practices for structuring introduction sections, addressing referee reports, and presenting regression tables according to top journal standards.
+                <h3 class="resource-item-title">
+                  <a href="https://theeffectbook.net" target="_blank" rel="noopener noreferrer">The Effect: Research Design &amp; Causality</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Nick Huntington-Klein's intuitive guide on identifying causal effects, regression discontinuity, identification strategies, and practical empirical design for social scientists.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Identification</span>
+                  <span class="resource-tag">RDD &amp; Event Studies</span>
+                  <span class="resource-tag">Intuitive Math</span>
                 </div>
+                <a href="https://theeffectbook.net" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Read The Effect Book</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 19. QuantEcon (Sargent & Stachurski) -->
+              <div class="resource-item-card reveal-on-scroll" data-category="econometrics" data-keywords="quantecon thomas sargent john stachurski python julia dynamic programming computational macro">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Computational Econ</span>
+                  <span class="resource-tag">Python &amp; Julia</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://quantecon.org" target="_blank" rel="noopener noreferrer">QuantEcon (Sargent &amp; Stachurski)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Open-source computational economics courses founded by Nobel Laureate Thomas Sargent. Covers dynamic programming, Markov chains, and macroeconomic modeling in Python and Julia.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Dynamic Programming</span>
+                  <span class="resource-tag">Python Lectures</span>
+                  <span class="resource-tag">Macro Modeling</span>
+                </div>
+                <a href="https://quantecon.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Visit QuantEcon Platform</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 20. fixest & did R Packages -->
+              <div class="resource-item-card reveal-on-scroll" data-category="econometrics" data-keywords="fixest did r package callaway santanna staggered difference in differences fixed effects">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">R Package</span>
+                  <span class="resource-tag">High Speed</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://lrberge.github.io/fixest/" target="_blank" rel="noopener noreferrer">fixest &amp; did (R Packages)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  High-speed multi-way fixed effects estimation (`feols`) and Callaway-Sant'Anna staggered difference-in-differences estimators addressing dynamic treatment effect heterogeneity.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Staggered DiD</span>
+                  <span class="resource-tag">Fast Multiway FE</span>
+                  <span class="resource-tag">CRAN Certified</span>
+                </div>
+                <a href="https://lrberge.github.io/fixest/" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>View fixest Documentation</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 21. Dynare DSGE Modeling Platform -->
+              <div class="resource-item-card reveal-on-scroll" data-category="econometrics" data-keywords="dynare dsge matlab octave macro modeling central banks bayesian estimation">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Macro Modeling</span>
+                  <span class="resource-tag">DSGE Platform</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.dynare.org" target="_blank" rel="noopener noreferrer">Dynare DSGE Software</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Standard software platform used by central banks and academic macroeconomists to solve, simulate, and estimate Dynamic Stochastic General Equilibrium (DSGE) models.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">MATLAB / Octave</span>
+                  <span class="resource-tag">Bayesian Estimation</span>
+                  <span class="resource-tag">Policy Simulation</span>
+                </div>
+                <a href="https://www.dynare.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Download Dynare Suite</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 22. AEA OpenICPSR Data & Code -->
+              <div class="resource-item-card reveal-on-scroll" data-category="econometrics" data-keywords="openicpsr aea american economic association replication data code scripts journals">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Replication</span>
+                  <span class="resource-tag">AEA Archive</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.openicpsr.org/openicpsr/project/112701/version/V1/view" target="_blank" rel="noopener noreferrer">AEA Replication Repository</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Official repository hosting code and raw datasets for empirical papers published in the *American Economic Review* (AER) and AEA journals for transparent scientific replication.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">AER Replication</span>
+                  <span class="resource-tag">Stata / R / Python</span>
+                  <span class="resource-tag">Best Practices</span>
+                </div>
+                <a href="https://www.openicpsr.org/openicpsr/project/112701/version/V1/view" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Browse Replication Files</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
             </div>
           </div>
+
+          <!-- Section 4: Graduate School & Career Portals -->
+          <div class="resource-section-block" id="cat-career" style="margin-bottom: var(--space-3xl);">
+            <div class="reveal-on-scroll">
+              <span class="section-eyebrow">Category 04</span>
+              <h2>Graduate School, Pre-Doc &amp; Career Portals</h2>
+              <div class="hairline-green"></div>
+              <p style="margin-bottom: var(--space-lg);">Essential guidance, listings, and curricula for undergraduate-to-PhD transitions and professional economics pathways.</p>
+            </div>
+
+            <div class="resource-card-grid">
+              <!-- 23. PREDOC.org -->
+              <div class="resource-item-card reveal-on-scroll" data-category="career" data-keywords="predoc pre doctoral research assistant ra jobs fellowship graduate school admissions">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Pre-Doc Careers</span>
+                  <span class="resource-tag">Consortium Hub</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://predoc.org" target="_blank" rel="noopener noreferrer">PREDOC.org (Pre-Doctoral Opportunities)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  The primary clearinghouse for pre-doctoral research positions across Stanford, Harvard, MIT, Chicago, and top economics departments. Includes courses and application tips.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Pre-Doc Job Board</span>
+                  <span class="resource-tag">Coding Courses</span>
+                  <span class="resource-tag">Mentorship Guides</span>
+                </div>
+                <a href="https://predoc.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Explore PREDOC Positions</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 24. AEA JOE -->
+              <div class="resource-item-card reveal-on-scroll" data-category="career" data-keywords="joe job openings economists aea academic market faculty postdoc think tank consulting">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Academic Market</span>
+                  <span class="resource-tag">Official AEA</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.aeaweb.org/joe/" target="_blank" rel="noopener noreferrer">AEA JOE (Job Openings for Economists)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  The official job listings portal maintained by the American Economic Association for university assistant professorships, central bank research roles, and post-doctoral positions.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Tenure Track</span>
+                  <span class="resource-tag">Central Bank Openings</span>
+                  <span class="resource-tag">Postdoc Roles</span>
+                </div>
+                <a href="https://www.aeaweb.org/joe/" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Search JOE Listings</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 25. NBER RA Opportunities -->
+              <div class="resource-item-card reveal-on-scroll" data-category="career" data-keywords="nber research assistant jobs analyst positions economics careers pre doc">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">RA Postings</span>
+                  <span class="resource-tag">Research Staff</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://www.nber.org/jobs" target="_blank" rel="noopener noreferrer">NBER Research Assistant &amp; Job Board</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Full-time project coordinator and research analyst positions working directly with NBER research associates on major empirical projects.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Full-Time RA</span>
+                  <span class="resource-tag">Data Analysts</span>
+                  <span class="resource-tag">Direct Faculty Work</span>
+                </div>
+                <a href="https://www.nber.org/jobs" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>View NBER Job Board</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 26. Open Syllabus Project -->
+              <div class="resource-item-card reveal-on-scroll" data-category="career" data-keywords="open syllabus reading lists economics textbooks curriculum syllabi course outlines">
+                <div class="resource-item-header">
+                  <span class="badge badge-navy">Curriculum Explorer</span>
+                  <span class="resource-tag">7M+ Syllabi</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://opensyllabus.org" target="_blank" rel="noopener noreferrer">Open Syllabus Project (Economics)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  A massive open database analyzing over 7 million university syllabi, allowing students to discover the most assigned textbooks and research papers across universities worldwide.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Assigned Textbooks</span>
+                  <span class="resource-tag">Core Syllabi</span>
+                  <span class="resource-tag">Citation Rankings</span>
+                </div>
+                <a href="https://opensyllabus.org" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Explore Open Syllabus</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- 27. MIT OpenCourseWare Economics -->
+              <div class="resource-item-card reveal-on-scroll" data-category="career" data-keywords="mit ocw open courseware lecture notes micro macro econometrics math econ free lectures">
+                <div class="resource-item-header">
+                  <span class="badge badge-green">Free Courses</span>
+                  <span class="resource-tag">MIT OpenCourseWare</span>
+                </div>
+                <h3 class="resource-item-title">
+                  <a href="https://ocw.mit.edu/courses/economics/" target="_blank" rel="noopener noreferrer">MIT OpenCourseWare (Economics)</a>
+                </h3>
+                <p class="resource-item-desc">
+                  Free and open access to complete undergraduate and graduate economics lecture notes, problem sets, and exams from the Department of Economics at MIT.
+                </p>
+                <div class="resource-tags-wrap">
+                  <span class="resource-tag">Lecture Notes</span>
+                  <span class="resource-tag">Problem Sets &amp; Solutions</span>
+                  <span class="resource-tag">PhD &amp; Undergrad</span>
+                </div>
+                <a href="https://ocw.mit.edu/courses/economics/" target="_blank" rel="noopener noreferrer" class="resource-action-link">
+                  <span>Browse MIT Courses</span>
+                  <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -250,10 +806,10 @@
       <section class="section section-alt">
         <div class="container container-reading text-center reveal-on-scroll">
           <span class="section-eyebrow">Collaborative Curation</span>
-          <h2>Have a Resource or Syllabus to Share?</h2>
+          <h2>Have a Resource or Dataset to Recommend?</h2>
           <div class="hairline-green center"></div>
           <p>
-            EconVision welcomes syllabus recommendations, open-source replication packages, and dataset links from professors and researchers.
+            EconVision continuously expands this directory with community suggestions. If you know of an essential dataset, open-source econometrics package, or academic fellowship portal, let us know.
           </p>
           <a href="contact.html" class="btn btn-navy">Submit a Resource Recommendation</a>
         </div>
