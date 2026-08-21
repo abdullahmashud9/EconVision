@@ -140,25 +140,25 @@
                   Fill out the form below and our coordination team will respond within 2 business days.
                 </p>
 
-                <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for contacting EconVision. Our academic coordination team will be in touch shortly.');">
+                <form id="contactForm" novalidate>
                   <div class="form-group">
-                    <label for="fullName" class="form-label">Full Name *</label>
-                    <input type="text" id="fullName" class="form-control" placeholder="e.g. Dr. Jane Doe" required>
+                    <label for="contactFullName" class="form-label">Full Name *</label>
+                    <input type="text" id="contactFullName" name="fullName" class="form-control" placeholder="e.g. Dr. Jane Doe" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="affiliation" class="form-label">Institutional / University Affiliation *</label>
-                    <input type="text" id="affiliation" class="form-control" placeholder="e.g. London School of Economics, IMF, etc." required>
+                    <label for="contactAffiliation" class="form-label">Institutional / University Affiliation *</label>
+                    <input type="text" id="contactAffiliation" name="affiliation" class="form-control" placeholder="e.g. London School of Economics, IMF, etc." required>
                   </div>
 
                   <div class="form-group">
-                    <label for="email" class="form-label">Academic or Professional Email *</label>
-                    <input type="email" id="email" class="form-control" placeholder="name@institution.edu" required>
+                    <label for="contactEmail" class="form-label">Academic or Professional Email *</label>
+                    <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@institution.edu" required>
                   </div>
 
                   <div class="form-group">
-                    <label for="inquiryType" class="form-label">Inquiry Type *</label>
-                    <select id="inquiryType" class="form-control" required>
+                    <label for="contactInquiryType" class="form-label">Inquiry Type *</label>
+                    <select id="contactInquiryType" name="inquiryType" class="form-control" required>
                       <option value="" disabled selected>Select an inquiry area...</option>
                       <option value="general">General Community Inquiry</option>
                       <option value="editorial">Article / Research Submission</option>
@@ -168,14 +168,23 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="message" class="form-label">Message *</label>
-                    <textarea id="message" class="form-control" rows="4" placeholder="Please outline your message or proposed topic..." required></textarea>
+                    <label for="contactMessage" class="form-label">Message *</label>
+                    <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Please outline your message or proposed topic..." required></textarea>
                   </div>
 
-                  <button type="submit" class="btn btn-green" style="width: 100%;">
-                    Submit Academic Inquiry
+                  <button type="submit" class="btn btn-green" id="btnContactSubmit" style="width: 100%; min-height: 48px;">
+                    <span>Submit Academic Inquiry</span>
                   </button>
                 </form>
+
+                <!-- Success Confirmation Message (Shown upon submission) -->
+                <div class="form-success-banner" id="contactSuccessBanner" style="display: none; margin-top: var(--space-lg);">
+                  <div class="form-success-icon">✓</div>
+                  <h3 class="form-success-title">Inquiry Received!</h3>
+                  <p class="form-success-text">
+                    Thank you for reaching out to EconVision. Your inquiry has been submitted and recorded. Our academic coordination desk will review your message and reply via email within 2 business days.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

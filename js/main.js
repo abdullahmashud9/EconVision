@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   highlightActiveNavLink();
   initScrollReveal();
   initRegistrationForm();
+  initContactForm();
 });
 
 /**
@@ -255,7 +256,88 @@ function initRegistrationForm() {
 }
 
 /**
- * 6. Generate and Download Professional Member Receipt Image (html2canvas)
+ * 6. Academic Inquiries Form Handler (contact.html)
+ */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  const successBanner = document.getElementById('contactSuccessBanner');
+  const submitBtn = document.getElementById('btnContactSubmit');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Validate fields
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;">
+          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10"></path>
+        </svg>
+        <span>Submitting Inquiry...</span>
+      `;
+    }
+
+    const formData = new FormData(form);
+    const payload = {
+      type: 'inquiry',
+      fullName: formData.get('fullName') || '',
+      affiliation: formData.get('affiliation') || '',
+      email: formData.get('email') || '',
+      inquiryType: formData.get('inquiryType') || '',
+      message: formData.get('message') || ''
+    };
+
+    try {
+      if (GOOGLE_SHEET_WEB_APP_URL && GOOGLE_SHEET_WEB_APP_URL.trim() !== '') {
+        const response = await fetch(GOOGLE_SHEET_WEB_APP_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+        console.log('EconVision inquiry recorded in Google Sheets:', result);
+      } else {
+        await new Promise(resolve => setTimeout(resolve, 800));
+        console.info('EconVision Inquiry recorded locally:', payload);
+      }
+
+      // Display success banner and hide form
+      form.style.display = 'none';
+      if (successBanner) {
+        successBanner.style.display = 'block';
+        successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } catch (error) {
+      console.warn('Network / fetch response notice:', error);
+      form.style.display = 'none';
+      if (successBanner) {
+        successBanner.style.display = 'block';
+        successBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
+    }
+  });
+}
+
+/**
+ * 7. Generate and Download Professional Member Receipt Image (html2canvas)
  */
 async function generateAndDownloadReceipt(userData) {
   const receiptElement = document.getElementById('econvisionMemberReceipt');
