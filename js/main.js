@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initResourceFilter();
   initArticlesHub();
+  initSmartEmailLinks();
 });
 
 /**
@@ -988,5 +989,36 @@ function initArticlesHub() {
     if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
       closeModal();
     }
+  });
+}
+
+/**
+ * 11. Smart Direct Gmail Link Dispatcher
+ * Ensures clicking contact.econvision@gmail.com opens Gmail on PC, Mac, tablets, and phones
+ */
+function initSmartEmailLinks() {
+  document.querySelectorAll('a[href*="contact.econvision@gmail.com"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isAndroid = /Android/i.test(navigator.userAgent);
+      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        if (isIOS) {
+          // Attempt iOS Gmail URL scheme, fallback to standard mail
+          window.location.href = 'googlegmail:///co?to=contact.econvision@gmail.com';
+          setTimeout(() => {
+            window.location.href = 'mailto:contact.econvision@gmail.com';
+          }, 350);
+        } else {
+          // Android and other mobile devices
+          window.location.href = 'mailto:contact.econvision@gmail.com';
+        }
+      } else {
+        // Desktop / PC / Mac: Open direct Gmail web composer in new tab
+        e.preventDefault();
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=contact.econvision@gmail.com', '_blank', 'noopener,noreferrer');
+      }
+    });
   });
 }
