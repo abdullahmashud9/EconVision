@@ -1018,7 +1018,7 @@ textarea.form-control {
   font-weight: 700;
 }
 
-/* Academic Hero Illustration Frame */
+/* Academic Hero Illustration Frame with 3D Depth */
 .hero-visual-card {
   background-color: #FFFFFF;
   border: 1px solid #CBD5E1;
@@ -1026,11 +1026,15 @@ textarea.form-control {
   box-shadow: 0 12px 35px -10px rgba(11, 27, 50, 0.08);
   overflow: hidden;
   position: relative;
-  transition: transform var(--transition-fast);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .hero-visual-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  border-color: rgba(53, 108, 151, 0.4);
+  box-shadow: 0 20px 45px -8px rgba(11, 27, 50, 0.14), 0 0 25px rgba(110, 163, 93, 0.08);
 }
 
 .hero-visual-header {
@@ -1052,7 +1056,12 @@ textarea.form-control {
   height: 9px;
   border-radius: 50%;
   background-color: #CBD5E1;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
+.hero-visual-card:hover .hero-visual-dot:nth-child(1) { background-color: #EF4444; transform: scale(1.15); }
+.hero-visual-card:hover .hero-visual-dot:nth-child(2) { background-color: #F59E0B; transform: scale(1.15); }
+.hero-visual-card:hover .hero-visual-dot:nth-child(3) { background-color: #10B981; transform: scale(1.15); }
 
 .hero-visual-title {
   font-family: var(--font-sans-body);
@@ -1072,6 +1081,96 @@ textarea.form-control {
   height: auto;
   display: block;
 }
+
+/* ==========================================================================
+   SVG Hero & Diagram Micro-Animations
+   ========================================================================== */
+
+/* 1. Equilibrium Dot Pulse & Glow */
+@keyframes equilibriumPulse {
+  0%, 100% {
+    r: 4.5;
+    fill: #356C97;
+    filter: drop-shadow(0 0 0px rgba(53, 108, 151, 0));
+  }
+  50% {
+    r: 6.5;
+    fill: #6EA35D;
+    filter: drop-shadow(0 0 8px rgba(110, 163, 93, 0.6));
+  }
+}
+
+.hero-eq-dot {
+  animation: equilibriumPulse 3.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* 2. Floating Speech Bubbles */
+@keyframes floatBubbleUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes floatBubbleDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+.hero-bubble-left {
+  animation: floatBubbleUp 4s ease-in-out infinite;
+}
+
+.hero-bubble-right {
+  animation: floatBubbleDown 4.6s ease-in-out infinite 0.5s;
+}
+
+/* 3. Dynamic Network Stream Flow Lines */
+@keyframes dashStream {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+
+.network-stream-line {
+  stroke-dasharray: 6 6;
+  animation: dashStream 3.5s linear infinite;
+}
+
+/* 4. Ecosystem Hub Breathing Glow */
+@keyframes hubGlowPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(110, 163, 93, 0));
+  }
+  50% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 14px rgba(110, 163, 93, 0.4));
+  }
+}
+
+.ecosystem-hub-node {
+  animation: hubGlowPulse 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* 5. Histogram Bar Hover Reaction */
+.hero-bar-chart rect {
+  transition: transform 0.25s ease, fill 0.25s ease;
+  transform-origin: bottom;
+}
+
+.hero-visual-card:hover .hero-bar-chart rect:nth-child(2) { transform: scaleY(1.08); fill: #356C97; }
+.hero-visual-card:hover .hero-bar-chart rect:nth-child(3) { transform: scaleY(1.12); fill: #6EA35D; }
+.hero-visual-card:hover .hero-bar-chart rect:nth-child(4) { transform: scaleY(1.15); fill: #356C97; }
+.hero-visual-card:hover .hero-bar-chart rect:nth-child(5) { transform: scaleY(1.06); fill: #6EA35D; }
 
 @media (max-width: 992px) {
   .hero-grid {
@@ -1195,12 +1294,13 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  transition: border-color 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .audience-card:hover {
   border-color: var(--color-brand-blue);
-  transform: translateY(-3px);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(11, 27, 50, 0.08);
 }
 
 .audience-icon-box {
@@ -1217,6 +1317,15 @@ textarea.form-control {
   justify-content: center;
   margin-bottom: var(--space-md);
   flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.audience-card:hover .audience-icon-box {
+  transform: scale(1.12) rotate(-4deg);
+  background-color: var(--color-brand-blue);
+  color: #FFFFFF;
+  border-color: var(--color-brand-blue);
+  box-shadow: 0 6px 16px rgba(53, 108, 151, 0.35);
 }
 
 .audience-icon-box svg {
@@ -1257,6 +1366,12 @@ textarea.form-control {
   gap: 0.3rem;
   padding-top: var(--space-sm);
   border-top: var(--border-hairline);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.audience-card:hover .audience-card-tag {
+  color: var(--color-brand-green-dark);
+  transform: translateX(3px);
 }
 
 @media (max-width: 992px) {
@@ -1296,12 +1411,13 @@ textarea.form-control {
   display: flex;
   gap: var(--space-lg);
   align-items: flex-start;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  transition: border-color 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .benefit-card:hover {
   border-color: var(--color-brand-green);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(11, 27, 50, 0.08);
 }
 
 .benefit-icon-wrapper {
@@ -1315,6 +1431,15 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover .benefit-icon-wrapper {
+  transform: scale(1.12) rotate(-4deg);
+  background-color: var(--color-brand-green);
+  color: #FFFFFF;
+  border-color: var(--color-brand-green);
+  box-shadow: 0 6px 16px rgba(110, 163, 93, 0.35);
 }
 
 .benefit-icon-wrapper svg {

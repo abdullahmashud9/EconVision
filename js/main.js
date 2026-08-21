@@ -4,16 +4,37 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initScrollProgressBar();
   initStickyHeader();
   initMobileMenu();
   highlightActiveNavLink();
   initScrollReveal();
+  initHeroParallaxTilt();
+  initBackToTopButton();
   initRegistrationForm();
   initContactForm();
 });
 
 /**
- * 1. Sticky Header Elevation on Scroll
+ * 1. Global Top Scroll Progress Indicator
+ */
+function initScrollProgressBar() {
+  const bar = document.getElementById('scrollProgressBar');
+  if (!bar) return;
+
+  const updateProgress = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  };
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+}
+
+/**
+ * 2. Sticky Header Elevation on Scroll
  */
 function initStickyHeader() {
   const header = document.querySelector('.site-header');
@@ -32,7 +53,7 @@ function initStickyHeader() {
 }
 
 /**
- * 2. Mobile Navigation Drawer Toggle
+ * 3. Mobile Navigation Drawer Toggle
  */
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.mobile-menu-toggle');
@@ -86,7 +107,7 @@ function initMobileMenu() {
 }
 
 /**
- * 3. Highlight Active Navigation Links based on URL
+ * 4. Highlight Active Navigation Links based on URL
  */
 function highlightActiveNavLink() {
   const path = window.location.pathname.replace(/\/$/, '') || '/index.html';
@@ -111,17 +132,16 @@ function highlightActiveNavLink() {
 }
 
 /**
- * 4. Gentle Minimal Scroll Fade-in Reveal
+ * 5. Modern Scroll Reveal with Staggered Cascades
  */
 function initScrollReveal() {
-  // Check if reduced motion is requested
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
-    document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
+    document.querySelectorAll('.reveal-on-scroll, .reveal-scale').forEach(el => el.classList.add('is-visible'));
     return;
   }
 
-  const elements = document.querySelectorAll('.reveal-on-scroll');
+  const elements = document.querySelectorAll('.reveal-on-scroll, .reveal-scale');
   if (!elements.length) return;
 
   if ('IntersectionObserver' in window) {
@@ -129,20 +149,81 @@ function initScrollReveal() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
+          
+          // Also trigger any staggered child items
+          if (entry.target.classList.contains('reveal-stagger')) {
+            entry.target.querySelectorAll('.reveal-on-scroll').forEach(child => child.classList.add('is-visible'));
+          }
+
           obs.unobserve(entry.target);
         }
       });
     }, {
       root: null,
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     elements.forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-stagger').forEach(el => observer.observe(el));
   } else {
-    // Fallback for older browsers
     elements.forEach(el => el.classList.add('is-visible'));
   }
+}
+
+/**
+ * 6. Interactive 3D Parallax Tilt on Hero Card
+ */
+function initHeroParallaxTilt() {
+  const card = document.querySelector('.hero-visual-card');
+  if (!card) return;
+
+  // Only activate on devices that support hover / mouse pointer
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -5; // max 5deg
+      const rotateY = ((x - centerX) / centerX) * 5;  // max 5deg
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  }
+}
+
+/**
+ * 7. Smooth Back to Top Button
+ */
+function initBackToTopButton() {
+  const btn = document.getElementById('btnBackToTop');
+  if (!btn) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 350) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 }
 
 /**
