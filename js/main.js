@@ -149,7 +149,7 @@ function initScrollReveal() {
  * 5. Academic Membership Registration Form Handler (Google Sheets Integration)
  */
 // Set your Google Apps Script Web App URL here after deploying google-apps-script.js
-const GOOGLE_SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzm1Tb7NfXg5a4y_gFQ6bnSlLhLhzMaqjinpJJhDKVSDODLYL1AZL0lhjUjjNxQJFw/exec';
+const GOOGLE_SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzqpk_ggXXiapAjZuDnyn9GPICGSQYcL6BT0RHFbrRDssNmM42bburnves5gYfibEUI/exec';
 
 function initRegistrationForm() {
   const form = document.getElementById('econRegistrationForm');
