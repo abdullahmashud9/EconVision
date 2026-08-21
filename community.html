@@ -98,111 +98,249 @@
             <li><span class="separator">/</span></li>
             <li><span>Community</span></li>
           </ul>
-          <div class="badge badge-navy" style="margin-bottom: var(--space-xs);">Academic Network</div>
+          <div class="badge badge-navy" style="margin-bottom: var(--space-xs);">Academic &amp; Policy Network</div>
           <h1 class="page-header-title">The EconVision Community</h1>
           <div class="hairline-green"></div>
           <p class="page-header-description lead">
-            A diverse, multi-tiered network bridging undergraduate scholars, tenured faculty, central bankers, and policy researchers worldwide.
+            A collaborative, unpretentious circle connecting economics undergraduates, graduate scholars, college professors, and policy analysts to dissect papers, debug econometric code, critique thesis drafts, and share honest academic guidance.
           </p>
         </div>
       </section>
 
-      <!-- Cohorts Section -->
+      <!-- What We Do Daily (4 Core Community Pillars) -->
       <section class="section">
         <div class="container">
           <div class="section-header text-center reveal-on-scroll">
-            <span class="section-eyebrow">Membership Cohorts</span>
-            <h2 class="section-title">Where Do You Fit in EconVision?</h2>
+            <span class="section-eyebrow">How We Collaborate</span>
+            <h2 class="section-title">What Actually Happens Inside EconVision</h2>
             <div class="hairline-green center"></div>
             <p class="section-subtitle">
-              Our community is structured around four primary participant cohorts, ensuring tailored discourse, relevant opportunities, and multi-directional mentorship.
+              We started EconVision because economics can feel isolating when you are stuck debugging an econometric script or trying to figure out if your thesis idea has an endogeneity flaw. Here is what our members work on together every week.
             </p>
           </div>
 
           <div class="grid-2" style="gap: var(--space-xl);">
-            <!-- Cohort 1 -->
-            <div class="card reveal-on-scroll">
+            
+            <!-- Pillar 1 -->
+            <div class="community-pillar-card reveal-on-scroll">
+              <div class="community-pillar-icon">
+                <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Pre-print &amp; Working Paper Reading Circles
+              </h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-secondary); line-height: 1.68; margin-bottom: var(--space-md);">
+                Every fortnight, members pick a recent working paper from NBER, CEPR, or arXiv and dissect it line-by-line. We don't just read the abstract—we scrutinize the identification assumptions, the parallel trends tests in staggered DiD, and how the authors addressed unobserved confounders.
+              </p>
+              <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.88rem; color: var(--color-navy-dark); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+                <li>Causal inference identification reviews</li>
+                <li>Deconstructing AER &amp; QJE replication code</li>
+                <li>Translating technical math into plain economic intuition</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="community-pillar-card reveal-on-scroll">
+              <div class="community-pillar-icon">
+                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Undergraduate &amp; Master's Thesis Clinic
+              </h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-secondary); line-height: 1.68; margin-bottom: var(--space-md);">
+                Writing a thesis is difficult, especially if you attend a regional college without dedicated econometrics lab support. Members share early-stage research proposals, survey questionnaires, and regression outputs for constructive peer review before submitting to university advisors.
+              </p>
+              <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.88rem; color: var(--color-navy-dark); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+                <li>Literature review structuring &amp; gap identification</li>
+                <li>Instrumental Variable (IV) validity checks</li>
+                <li>Fixing standard error clustering and panel unit roots</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="community-pillar-card reveal-on-scroll">
+              <div class="community-pillar-icon">
+                <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Data Wrangling &amp; Code Troubleshooting
+              </h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-secondary); line-height: 1.68; margin-bottom: var(--space-md);">
+                Applied economics requires messy data management. Our discussion channels are filled with active snippets helping peers merge NSSO consumer rounds, extract historical FRED series via API, clean NFHS survey weights, or debug R packages like <code style="font-family: monospace; font-size: 0.88rem; background: var(--color-bg-alt); padding: 1px 5px; border-radius: 3px;">fixest</code> and <code style="font-family: monospace; font-size: 0.88rem; background: var(--color-bg-alt); padding: 1px 5px; border-radius: 3px;">did</code>.
+              </p>
+              <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.88rem; color: var(--color-navy-dark); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+                <li>R, Stata, and Python script optimization</li>
+                <li>Census, WDI, and RBI DBIE data cleaning scripts</li>
+                <li>Event study and coefficient plotting best practices</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="community-pillar-card reveal-on-scroll">
+              <div class="community-pillar-icon">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 style="font-size: 1.25rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Pre-Doc, Grad School &amp; RA Career Guidance
+              </h3>
+              <p style="font-size: 0.94rem; color: var(--color-text-secondary); line-height: 1.68; margin-bottom: var(--space-md);">
+                Demystifying the economics career path. We share honest perspectives on applying for Pre-Doctoral Fellowships (PREDOC, J-PAL, NBER), cold emailing professors for research assistant roles, preparing for quantitative exams, and writing compelling Statements of Purpose (SOP).
+              </p>
+              <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.88rem; color: var(--color-navy-dark); line-height: 1.6; display: flex; flex-direction: column; gap: 4px;">
+                <li>SOP reviews by admitted PhDs and Pre-Docs</li>
+                <li>Math preparation roadmaps (Real Analysis &amp; Linear Algebra)</li>
+                <li>Navigating funding and scholarships in India and abroad</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Active Working Groups -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header text-center reveal-on-scroll">
+            <span class="section-eyebrow">Specialized Circles</span>
+            <h2 class="section-title">Active Research &amp; Discussion Working Groups</h2>
+            <div class="hairline-green center"></div>
+            <p class="section-subtitle">
+              Members organize into specialized interest tracks to share literature preprints and collaborate on joint empirical working papers.
+            </p>
+          </div>
+
+          <div class="grid-2" style="gap: var(--space-lg);">
+            
+            <div class="card reveal-on-scroll" style="background: #FFFFFF;">
               <div class="card-header">
-                <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Cohort 01</span>
-                <h3 class="card-title">Economics Students (Undergraduate & Masters)</h3>
+                <span class="badge badge-green" style="margin-bottom: 4px;">Working Group A</span>
+                <h3 class="card-title">Applied Microeconomics &amp; Development</h3>
               </div>
               <div class="card-body">
-                <p>
-                  Aspiring economists navigating core micro, macro, and econometrics coursework, preparing for graduate school admissions, and writing senior theses.
-                </p>
-                <ul style="list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.9rem;">
-                  <li>✓ Peer-led reading groups and econometrics workshops (R, Stata, Python)</li>
-                  <li>✓ Graduate school application tips and statement of purpose reviews</li>
-                  <li>✓ Early-stage thesis feedback from professors and PhD researchers</li>
-                </ul>
+                Focuses on randomized evaluations (RCTs), health and nutrition interventions, education policy, rural credit deepening, and welfare scheme delivery across South Asia and Sub-Saharan Africa.
               </div>
               <div class="card-footer">
-                <span class="text-green" style="font-weight: 600;">Active in LinkedIn Discussions</span>
+                <span class="text-green" style="font-weight: 600; font-size: 0.88rem;">Bi-weekly discussion threads</span>
               </div>
             </div>
 
-            <!-- Cohort 2 -->
-            <div class="card reveal-on-scroll">
+            <div class="card reveal-on-scroll" style="background: #FFFFFF;">
               <div class="card-header">
-                <span class="badge badge-navy" style="margin-bottom: var(--space-xs);">Cohort 02</span>
-                <h3 class="card-title">PhD Candidates & Academic Faculty</h3>
+                <span class="badge badge-navy" style="margin-bottom: 4px;">Working Group B</span>
+                <h3 class="card-title">Macroeconomics, Central Banking &amp; Financial Systems</h3>
               </div>
               <div class="card-body">
-                <p>
-                  Doctoral researchers, postdocs, and university professors dedicated to advancing theoretical and applied economics across global institutions.
-                </p>
-                <ul style="list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.9rem;">
-                  <li>✓ Pre-print dissemination and peer feedback before journal submissions</li>
-                  <li>✓ Cross-university research co-authorships and symposium speaking</li>
-                  <li>✓ Recruitment channels for Research Assistant (RA) and Postdoc positions</li>
-                </ul>
+                Tracks inflation dynamics, monetary policy transmission (RBI / Fed / ECB), sovereign bond yields, banking sector asset quality (NPAs), and international capital flows.
               </div>
               <div class="card-footer">
-                <span class="text-navy" style="font-weight: 600;">Faculty & Research Hub</span>
+                <span class="text-navy" style="font-weight: 600; font-size: 0.88rem;">Macro forecast &amp; yield curve analyses</span>
               </div>
             </div>
 
-            <!-- Cohort 3 -->
-            <div class="card reveal-on-scroll">
+            <div class="card reveal-on-scroll" style="background: #FFFFFF;">
               <div class="card-header">
-                <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Cohort 03</span>
-                <h3 class="card-title">Policy Researchers & Think Tank Analysts</h3>
+                <span class="badge badge-green" style="margin-bottom: 4px;">Working Group C</span>
+                <h3 class="card-title">Causal Econometrics &amp; Computational Methods</h3>
               </div>
               <div class="card-body">
-                <p>
-                  Economists working within government agencies, multilateral development organizations (IMF, World Bank), and independent policy institutes.
-                </p>
-                <ul style="list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.9rem;">
-                  <li>✓ Real-world policy impact assessments and regulatory briefs</li>
-                  <li>✓ Data-driven discussions on fiscal policy, trade, and climate economics</li>
-                  <li>✓ Translation of complex mathematical models into public discourse</li>
-                </ul>
+                Dedicated to quasi-experimental research designs: modern staggered Difference-in-Differences, Regression Discontinuity (RDD), Synthetic Control, and Julia/Python dynamic modeling.
               </div>
               <div class="card-footer">
-                <span class="text-green" style="font-weight: 600;">Public Policy Forum</span>
+                <span class="text-green" style="font-weight: 600; font-size: 0.88rem;">Replication code &amp; methodological notes</span>
               </div>
             </div>
 
-            <!-- Cohort 4 -->
-            <div class="card reveal-on-scroll">
+            <div class="card reveal-on-scroll" style="background: #FFFFFF;">
               <div class="card-header">
-                <span class="badge badge-green" style="margin-bottom: var(--space-xs);">Cohort 04</span>
-                <h3 class="card-title">Finance, Banking & Market Enthusiasts</h3>
+                <span class="badge badge-navy" style="margin-bottom: 4px;">Working Group D</span>
+                <h3 class="card-title">Spatial Economics, Trade &amp; Regional Growth</h3>
               </div>
               <div class="card-body">
-                <p>
-                  Quantitative analysts, central bank watchers, asset managers, and financial economists analyzing interest rates, inflation, and capital flows.
-                </p>
-                <ul style="list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs); font-size: 0.9rem;">
-                  <li>✓ Central bank meeting previews and interest rate forecasts</li>
-                  <li>✓ Applied financial econometrics and risk modeling exchange</li>
-                  <li>✓ Industry perspective on macroeconomic cycles and policy shifts</li>
-                </ul>
+                Investigates regional growth convergence among Indian states, urban agglomeration, port logistics, supply chain tariffs, and the political economy of industrial corridors.
               </div>
               <div class="card-footer">
-                <span class="text-green" style="font-weight: 600;">Markets & Macro Forum</span>
+                <span class="text-navy" style="font-weight: 600; font-size: 0.88rem;">State GSDP &amp; trade data deep dives</span>
               </div>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Real Discussion Highlights / Recent Threads -->
+      <section class="section">
+        <div class="container container-reading">
+          <div class="section-header text-center reveal-on-scroll">
+            <span class="section-eyebrow">Community In Action</span>
+            <h2 class="section-title">Recent Discussion Threads in Our Forum</h2>
+            <div class="hairline-green center"></div>
+            <p class="section-subtitle">
+              A quick glimpse of authentic technical questions and peer reviews taking place across our LinkedIn and WhatsApp groups.
+            </p>
+          </div>
+
+          <div class="reveal-on-scroll">
+            
+            <!-- Thread 1 -->
+            <div class="community-thread-card">
+              <div class="community-thread-meta">
+                <span class="badge badge-green" style="font-size: 0.72rem; padding: 2px 7px;">Econometrics Code</span>
+                <span>Posted by Economics PG Scholar (Assam)</span>
+                <span>• 2 days ago</span>
+              </div>
+              <h4 class="community-thread-title">
+                "Negative weights issue in Staggered DiD: Switching from standard TWFE to Callaway &amp; Sant'Anna (2021) in R"
+              </h4>
+              <p class="community-thread-desc">
+                <em>"I am evaluating a phased state policy rollout across Indian districts. When using standard two-way fixed effects with OLS, I noticed negative weights under Goodman-Bacon decomposition. How do I properly set up the never-treated control group using <code style="font-family: monospace;">att_gt()</code> in the <code style="font-family: monospace;">did</code> package?"</em>
+              </p>
+            </div>
+
+            <!-- Thread 2 -->
+            <div class="community-thread-card">
+              <div class="community-thread-meta">
+                <span class="badge badge-navy" style="font-size: 0.72rem; padding: 2px 7px;">Thesis Proposal</span>
+                <span>Posted by Undergraduate Scholar (Darrang College)</span>
+                <span>• 4 days ago</span>
+              </div>
+              <h4 class="community-thread-title">
+                "Peer review requested: Evaluating PM SVANidhi microcredit uptake using primary survey data in Sonitpur"
+              </h4>
+              <p class="community-thread-desc">
+                <em>"Sharing my initial questionnaire draft for surveying 150 street vendors on digital transaction history (UPI) and working capital access. Looking for advice on how to control for vendor literacy and distance to commercial bank branches."</em>
+              </p>
+            </div>
+
+            <!-- Thread 3 -->
+            <div class="community-thread-card">
+              <div class="community-thread-meta">
+                <span class="badge badge-green" style="font-size: 0.72rem; padding: 2px 7px;">Pre-Doc &amp; Careers</span>
+                <span>Posted by Master's Graduate (Delhi)</span>
+                <span>• 1 week ago</span>
+              </div>
+              <h4 class="community-thread-title">
+                "Pre-Doc coding task preparation: Common econometrics test formats at J-PAL and Opportunity Insights"
+              </h4>
+              <p class="community-thread-desc">
+                <em>"For anyone preparing for pre-doctoral RA coding tests: make sure you practice merging uncleaned survey data, generating summary balance tables with Stata/R, and running event study regressions with cluster-robust standard errors under tight 4-hour time limits."</em>
+              </p>
+            </div>
+
+            <!-- Thread 4 -->
+            <div class="community-thread-card">
+              <div class="community-thread-meta">
+                <span class="badge badge-navy" style="font-size: 0.72rem; padding: 2px 7px;">Macro Paper Review</span>
+                <span>Posted by Faculty Member (Bangalore)</span>
+                <span>• 1 week ago</span>
+              </div>
+              <h4 class="community-thread-title">
+                "Discussion note: Food inflation pass-through to core CPI and headline expectation anchoring in India"
+              </h4>
+              <p class="community-thread-desc">
+                <em>"A synthesis of recent RBI MPC minutes examining why weather shocks in vegetable prices have shorter half-lives but still risk un-anchoring household inflation expectations if food prices stay elevated for more than three consecutive quarters."</em>
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -211,18 +349,71 @@
       <section class="section section-alt">
         <div class="container container-reading reveal-on-scroll">
           <span class="section-eyebrow text-green">Community Standards</span>
-          <h2>The EconVision Code of Academic Conduct</h2>
+          <h2>The EconVision Code of Academic Ethos</h2>
           <div class="hairline-green"></div>
           <p>
-            To preserve the intellectual standard of our LinkedIn group and community channels, all participants are expected to adhere to our core standards:
+            To keep our community genuinely helpful, intellectually honest, and free from superficial noise, all members agree to uphold these core commitments:
           </p>
           <div class="callout-box" style="margin-top: var(--space-lg); background-color: #FFFFFF;">
-            <ol style="padding-left: var(--space-lg); margin: 0; display: flex; flex-direction: column; gap: var(--space-sm); color: var(--color-navy-dark); font-size: 0.95rem;">
-              <li><strong>Substantive Dialogue:</strong> Focus on arguments, methodologies, and data rather than partisan commentary or personal opinions.</li>
-              <li><strong>Citation Integrity:</strong> Attribute sources, pre-prints, and datasets properly when sharing claims or research summaries.</li>
-              <li><strong>Constructive Critique:</strong> Deliver critiques of working papers and theses constructively, aiming to assist author improvement.</li>
-              <li><strong>Inclusivity & Mentorship:</strong> Maintain an encouraging posture toward junior scholars and undergraduate students asking foundational questions.</li>
+            <ol style="padding-left: var(--space-lg); margin: 0; display: flex; flex-direction: column; gap: var(--space-md); color: var(--color-navy-dark); font-size: 0.95rem; line-height: 1.7;">
+              <li><strong>Zero Gatekeeping &amp; Patient Mentorship:</strong> Beginners asking foundational questions—such as how to interpret a regression table, what an instrumental variable is, or how to import data into R—are welcomed with encouragement, clear explanations, and paper references, not condescension.</li>
+              <li><strong>High Signal Over Noise:</strong> No promotional spam, generic motivational quotes, or unverified stock market speculation. Every post should provide empirical data, a clear economic question, a working draft, or a verifiable paper summary.</li>
+              <li><strong>Critique the Methodology, Support the Author:</strong> Research improves through rigorous scrutiny. Point out potential endogeneity, omitted variable bias, or measurement error respectfully, always offering suggestions for alternative estimators or data sources.</li>
+              <li><strong>Commitment to Open Science &amp; Replication:</strong> When sharing findings or models, provide replication code, equation definitions, and public data links so peers can reproduce the results independently.</li>
             </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- How to Get Involved Step-by-Step -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header text-center reveal-on-scroll">
+            <span class="section-eyebrow">Getting Started</span>
+            <h2 class="section-title">How to Join &amp; Participate in 3 Simple Steps</h2>
+            <div class="hairline-green center"></div>
+            <p class="section-subtitle">
+              Joining EconVision is completely free and open to anyone serious about economics research and empirical policy.
+            </p>
+          </div>
+
+          <div class="community-steps-grid reveal-on-scroll">
+            
+            <div class="community-step-card">
+              <div class="community-step-number">1</div>
+              <h3 style="font-size: 1.2rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Join the Network
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.6;">
+                Submit the quick registration form or connect with our official verified LinkedIn Group and WhatsApp Discussion Circle.
+              </p>
+            </div>
+
+            <div class="community-step-card">
+              <div class="community-step-number">2</div>
+              <h3 style="font-size: 1.2rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Introduce Your Work
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.6;">
+                Share your background: your university, the economic questions that excite you, and what dataset or paper you are currently working through.
+              </p>
+            </div>
+
+            <div class="community-step-card">
+              <div class="community-step-number">3</div>
+              <h3 style="font-size: 1.2rem; color: var(--color-primary-navy); margin-bottom: var(--space-xs);">
+                Collaborate &amp; Share
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--color-text-secondary); line-height: 1.6;">
+                Participate in fortnightly preprint dissections, ask peer review on your thesis drafts, or share your own econometric code snippets.
+              </p>
+            </div>
+
+          </div>
+
+          <div style="margin-top: var(--space-3xl); text-align: center;" class="reveal-on-scroll">
+            <a href="join.html" class="btn btn-green btn-lg" style="margin-right: var(--space-sm);">Join EconVision Network</a>
+            <a href="contact.html" class="btn btn-navy btn-lg">Contact Community Desk</a>
           </div>
         </div>
       </section>
@@ -230,9 +421,9 @@
       <!-- CTA -->
       <section class="section section-navy" style="text-align: center;">
         <div class="container container-reading reveal-on-scroll">
-          <h2 style="color: #FFFFFF; margin-bottom: var(--space-sm);">Connect With Your Peers Today</h2>
+          <h2 style="color: #FFFFFF; margin-bottom: var(--space-sm);">Be Part of a Higher-Signal Economics Network</h2>
           <p style="color: var(--color-text-inverse-muted); margin-bottom: var(--space-xl);">
-            Join over thousands of economics professionals and students in our verified LinkedIn group.
+            Connect with dedicated economics scholars, professors, and researchers crafting insights that shape tomorrow.
           </p>
           <a href="join.html" class="btn btn-green btn-lg">Join EconVision</a>
         </div>

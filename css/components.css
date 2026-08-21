@@ -2637,6 +2637,124 @@ textarea.form-control {
   }
 }
 
+/* ==========================================================================
+   Community Hub & Working Groups Styles
+   ========================================================================== */
+.community-pillar-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.community-pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent-green);
+  box-shadow: var(--shadow-md);
+}
+
+.community-pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: var(--color-bg-alt);
+  color: var(--color-accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.community-pillar-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.community-thread-card {
+  background: var(--color-bg-surface);
+  border-left: 3px solid var(--color-accent-green);
+  border-top: 1px solid var(--color-border-subtle);
+  border-right: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  transition: transform var(--transition-fast);
+}
+
+.community-thread-card:hover {
+  transform: translateX(4px);
+}
+
+.community-thread-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.community-thread-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-primary-navy);
+  margin: 0 0 6px 0;
+  line-height: 1.4;
+}
+
+.community-thread-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.community-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.community-step-card {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  text-align: center;
+  position: relative;
+}
+
+.community-step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-navy-dark);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+@media (max-width: 900px) {
+  .community-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 
 
