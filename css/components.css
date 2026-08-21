@@ -117,13 +117,15 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.25rem 0.65rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
   border-radius: var(--radius-sm);
-  line-height: 1;
+  line-height: 1.1;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .badge-gold, .badge-green {
@@ -1623,13 +1625,19 @@ textarea.form-control {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   margin-bottom: var(--space-sm);
+  flex-wrap: nowrap;
 }
 
 .article-reading-time {
   font-size: 0.8rem;
   color: var(--color-text-muted);
   font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
 }
 
 .article-preview-title {
@@ -2240,9 +2248,10 @@ textarea.form-control {
 .resource-item-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   margin-bottom: var(--space-sm);
+  flex-wrap: nowrap;
 }
 
 .resource-item-title {
@@ -2440,7 +2449,7 @@ textarea.form-control {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
   margin-bottom: var(--space-sm);
 }
@@ -2449,6 +2458,10 @@ textarea.form-control {
   font-size: 0.82rem;
   color: var(--color-text-muted);
   font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
 }
 
 .article-item-title {
