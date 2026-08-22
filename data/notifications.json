@@ -1,0 +1,52 @@
+[
+  {
+    "id": "notif-001",
+    "title": "Call for Papers: EconVision Working Paper Series (Fall 2026)",
+    "date": "2026-08-20",
+    "category": "Research",
+    "content": "Submissions are officially open for undergraduate, master's, and doctoral scholars to submit empirical working papers, thesis drafts, and policy briefs. Accepted papers will receive detailed methodological feedback from university faculty and be indexed in our open research repository.",
+    "isNew": true,
+    "pdfUrl": "assets/docs/call-for-papers-fall2026.pdf",
+    "pinned": true
+  },
+  {
+    "id": "notif-002",
+    "title": "Virtual Workshop: Staggered Difference-in-Differences & Causal Inference in R",
+    "date": "2026-08-18",
+    "category": "Event",
+    "content": "Join our 2-hour hands-on technical workshop on August 29, 2026. We will demonstrate how to diagnose negative weighting issues in TWFE, implement Callaway & Sant'Anna (2021) in R with the 'did' package, and plot clean event study graphs.",
+    "isNew": true,
+    "pdfUrl": "assets/docs/workshop-schedule-econometrics-2026.pdf",
+    "pinned": true
+  },
+  {
+    "id": "notif-003",
+    "title": "Empirical Policy Brief: Digital Payment Rails & Rural Credit Access in Northeast India",
+    "date": "2026-08-12",
+    "category": "Report",
+    "content": "Our research cohort has published a comprehensive policy report based on primary survey data from 350 micro-enterprises in Assam, analyzing how UPI transaction velocity unlocks formal bank credit under Mudra and PM SVANidhi schemes.",
+    "isNew": false,
+    "pdfUrl": "assets/docs/policy-brief-upi-rural-credit.pdf",
+    "pinned": false
+  },
+  {
+    "id": "notif-004",
+    "title": "Pre-Doctoral Fellowship & RA Application Mentorship Circle",
+    "date": "2026-08-05",
+    "category": "General",
+    "content": "An open virtual Q&A session with alumni currently working as full-time pre-docs at J-PAL South Asia and Opportunity Insights. Discussion topics include Stata/R data cleaning coding tests, Math course preparation (Real Analysis), and faculty recommendation letters.",
+    "isNew": false,
+    "pdfUrl": "",
+    "pinned": false
+  },
+  {
+    "id": "notif-005",
+    "title": "Reading Circle Notes: Public Provisioning & The Capability Approach in South Asia",
+    "date": "2026-07-28",
+    "category": "Report",
+    "content": "Synthesis document and discussion notes from our reading roundtable on Amartya Sen & Jean Drèze's framework, evaluating NFHS-5 child stunting data and universal primary health delivery.",
+    "isNew": false,
+    "pdfUrl": "assets/docs/reading-circle-notes-july2026.pdf",
+    "pinned": false
+  }
+]

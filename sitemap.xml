@@ -35,9 +35,17 @@
   <!-- Articles & Insights -->
   <url>
     <loc>https://econvision.vercel.app/articles.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Announcements & Notices -->
+  <url>
+    <loc>https://econvision.vercel.app/notifications.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- Events & Seminars -->
