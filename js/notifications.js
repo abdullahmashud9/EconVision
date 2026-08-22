@@ -3,7 +3,7 @@
  * Lightweight, accessible, and easily maintainable notice board renderer.
  */
 
-// Embedded fallback data in case of offline / local file protocol access
+// Embedded data store (guarantees instant rendering offline, local file://, or live server)
 const FALLBACK_NOTIFICATIONS = [
   {
     id: "notif-launch-2026",
@@ -33,7 +33,7 @@ const FALLBACK_NOTIFICATIONS = [
     content: "Join our 2-hour hands-on technical workshop on August 29, 2026. We will demonstrate how to diagnose negative weighting issues in TWFE, implement Callaway & Sant'Anna (2021) in R with the 'did' package, and plot clean event study graphs.",
     isNew: true,
     pdfUrl: "assets/docs/workshop-schedule-econometrics-2026.pdf",
-    pinned: true
+    pinned: false
   },
   {
     id: "notif-003",
@@ -68,18 +68,21 @@ const FALLBACK_NOTIFICATIONS = [
 ];
 
 /**
- * Fetch and parse notifications from data/notifications.json (with fallback)
+ * Fetch and parse notifications from data/notifications.json (with immediate fallback)
  */
 async function fetchNotifications() {
   try {
     const response = await fetch('data/notifications.json?v=' + Date.now());
-    if (!response.ok) throw new Error('HTTP ' + response.status);
-    const data = await response.json();
-    return Array.isArray(data) && data.length > 0 ? data : FALLBACK_NOTIFICATIONS;
+    if (response.ok) {
+      const data = await response.json();
+      if (Array.isArray(data) && data.length > 0) {
+        return data;
+      }
+    }
   } catch (err) {
-    console.info('Loading notifications from embedded data store.');
-    return FALLBACK_NOTIFICATIONS;
+    // Graceful fallback
   }
+  return FALLBACK_NOTIFICATIONS;
 }
 
 /**
@@ -146,7 +149,7 @@ function renderNotificationCardHTML(item, options = {}) {
   const cardPinnedClass = item.pinned ? 'notification-card-pinned' : '';
 
   return `
-    <article class="notification-card ${cardPinnedClass} reveal-on-scroll" data-category="${(item.category || '').toLowerCase()}" data-pinned="${item.pinned ? 'true' : 'false'}">
+    <article class="notification-card ${cardPinnedClass}" data-category="${(item.category || '').toLowerCase()}" data-pinned="${item.pinned ? 'true' : 'false'}">
       <div class="notif-card-header">
         <div class="notif-badges-group">
           ${pinnedBadge}
@@ -185,16 +188,18 @@ async function initNotificationsHome() {
   const container = document.getElementById('homeNotificationsContainer');
   if (!container) return;
 
+  // Immediate synchronous render from fallback store to prevent blank screen
+  const initialSorted = sortNotifications(FALLBACK_NOTIFICATIONS);
+  container.innerHTML = initialSorted.slice(0, 3).map(item => renderNotificationCardHTML(item, { isCompact: true })).join('');
+
+  // Then fetch fresh data asynchronously if available
   const rawData = await fetchNotifications();
   const sorted = sortNotifications(rawData);
-  const topItems = sorted.slice(0, 3); // Display top 3 on homepage
+  const topItems = sorted.slice(0, 3);
 
-  if (topItems.length === 0) {
-    container.innerHTML = `<p class="text-muted" style="text-align:center; padding: 2rem;">No announcements at this time.</p>`;
-    return;
+  if (topItems.length > 0) {
+    container.innerHTML = topItems.map(item => renderNotificationCardHTML(item, { isCompact: true })).join('');
   }
-
-  container.innerHTML = topItems.map(item => renderNotificationCardHTML(item, { isCompact: true })).join('');
 }
 
 /**
@@ -208,9 +213,7 @@ async function initNotificationsBoard() {
 
   if (!listContainer) return;
 
-  const rawData = await fetchNotifications();
-  const allItems = sortNotifications(rawData);
-
+  let allItems = sortNotifications(FALLBACK_NOTIFICATIONS);
   let currentCategory = 'all';
   let searchTerm = '';
 
@@ -264,6 +267,9 @@ async function initNotificationsBoard() {
     listContainer.innerHTML = filtered.map(item => renderNotificationCardHTML(item)).join('');
   }
 
+  // Immediate synchronous render
+  renderFilteredList();
+
   // Bind filter button clicks
   filterPills.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -282,12 +288,22 @@ async function initNotificationsBoard() {
     });
   }
 
-  // Initial render
-  renderFilteredList();
+  // Fetch updated data asynchronously and update list
+  fetchNotifications().then(rawData => {
+    if (Array.isArray(rawData) && rawData.length > 0) {
+      allItems = sortNotifications(rawData);
+      renderFilteredList();
+    }
+  });
 }
 
-// Auto-run on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', () => {
+// Auto-run on DOMContentLoaded and immediate fallback
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initNotificationsHome();
+    initNotificationsBoard();
+  });
+} else {
   initNotificationsHome();
   initNotificationsBoard();
-});
+}
