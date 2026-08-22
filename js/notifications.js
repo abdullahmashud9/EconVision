@@ -150,16 +150,24 @@ function renderNotificationCardHTML(item) {
     ? `<span class="notif-badge notif-badge-new">NEW</span>`
     : '';
 
-  const pdfButton = item.pdfUrl && item.pdfUrl.trim() !== ''
-    ? `<a href="${item.pdfUrl}" target="_blank" rel="noopener noreferrer" class="notif-pdf-btn" title="Download Document (PDF)" download>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="12" y1="18" x2="12" y2="12"></line>
-          <polyline points="9 15 12 18 15 15"></polyline>
-        </svg>
-        <span>Download PDF</span>
-      </a>`
+  const pdfActions = item.pdfUrl && item.pdfUrl.trim() !== ''
+    ? `<div class="notif-card-actions">
+        <a href="${item.pdfUrl}" target="_blank" rel="noopener noreferrer" class="notif-pdf-btn notif-view-pdf-btn" title="View Document in Browser">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <span>View PDF</span>
+        </a>
+        <a href="${item.pdfUrl}" class="notif-pdf-btn notif-download-pdf-btn" title="Save PDF to device" download>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download</span>
+        </a>
+      </div>`
     : '';
 
   const cardPinnedClass = item.pinned ? 'notification-card-pinned' : '';
@@ -181,7 +189,7 @@ function renderNotificationCardHTML(item) {
       <h3 class="notif-card-title">${item.title}</h3>
       <p class="notif-card-content">${item.content}</p>
 
-      ${pdfButton ? `<div class="notif-card-footer">${pdfButton}</div>` : ''}
+      ${pdfActions ? `<div class="notif-card-footer">${pdfActions}</div>` : ''}
     </article>
   `;
 }
