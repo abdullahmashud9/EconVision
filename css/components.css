@@ -3021,8 +3021,9 @@ textarea.form-control {
 }
 
 .notif-badge-pinned {
-  background-color: var(--color-primary-navy);
-  color: #FFFFFF;
+  background-color: var(--color-brand-blue-dark, #132B3E);
+  color: #FFFFFF !important;
+  border: 1px solid var(--color-brand-blue-dark, #132B3E);
 }
 
 .notif-badge-new {
@@ -3051,7 +3052,7 @@ textarea.form-control {
   font-family: var(--font-serif-heading);
   font-size: 1.22rem;
   font-weight: 700;
-  color: var(--color-primary-navy);
+  color: var(--color-primary-navy, #132B3E);
   margin: 0.25rem 0 0.5rem 0;
   line-height: 1.38;
 }
@@ -3094,42 +3095,42 @@ textarea.form-control {
 }
 
 .notif-view-pdf-btn {
-  background-color: var(--color-primary-navy);
-  color: #FFFFFF;
-  border: 1px solid var(--color-primary-navy);
+  background-color: var(--color-brand-blue, #356C97);
+  color: #FFFFFF !important;
+  border: 1px solid var(--color-brand-blue, #356C97);
 }
 
 .notif-view-pdf-btn:hover {
-  background-color: var(--color-navy-dark, #0B1924);
-  border-color: var(--color-navy-dark, #0B1924);
-  color: #FFFFFF;
+  background-color: var(--color-brand-blue-hover, #295577);
+  border-color: var(--color-brand-blue-hover, #295577);
+  color: #FFFFFF !important;
   transform: translateY(-1px);
 }
 
 .notif-view-pdf-btn svg {
-  color: var(--color-accent-green, #6EA35D);
+  color: #FFFFFF;
 }
 
 .notif-download-pdf-btn {
-  background-color: var(--color-bg-alt);
-  color: var(--color-text-secondary);
-  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-alt, #F8FAF8);
+  color: var(--color-brand-blue-dark, #132B3E) !important;
+  border: 1px solid var(--color-brand-blue-border, #BDD4E5);
 }
 
 .notif-download-pdf-btn:hover {
   background-color: #FFFFFF;
-  color: var(--color-primary-navy);
-  border-color: var(--color-primary-navy);
+  color: var(--color-brand-blue, #356C97) !important;
+  border-color: var(--color-brand-blue, #356C97);
   transform: translateY(-1px);
 }
 
 .notif-download-pdf-btn svg {
-  color: var(--color-text-muted);
+  color: var(--color-brand-blue, #356C97);
   transition: color var(--transition-fast);
 }
 
 .notif-download-pdf-btn:hover svg {
-  color: var(--color-primary-navy);
+  color: var(--color-brand-blue, #356C97);
 }
 
 /* Notifications Toolbar (Search & Filter) */
