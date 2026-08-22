@@ -116,10 +116,26 @@ function getCategoryBadgeClass(category) {
 }
 
 /**
- * Render single notification card HTML
+ * Render minimal horizontal strip HTML for the homepage preview
  */
-function renderNotificationCardHTML(item, options = {}) {
-  const isCompact = options.isCompact || false;
+function renderHomeNotificationStripHTML(item) {
+  return `
+    <a href="notifications.html#${item.id}" class="notification-strip-item" aria-label="${item.title}">
+      <span class="notification-strip-title">${item.title}</span>
+      <span class="notification-strip-arrow-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </span>
+    </a>
+  `;
+}
+
+/**
+ * Render single full notification card HTML for the dedicated Notice Board
+ */
+function renderNotificationCardHTML(item) {
   const formattedDate = formatNotificationDate(item.date);
   const badgeClass = getCategoryBadgeClass(item.category);
 
@@ -149,7 +165,7 @@ function renderNotificationCardHTML(item, options = {}) {
   const cardPinnedClass = item.pinned ? 'notification-card-pinned' : '';
 
   return `
-    <article class="notification-card ${cardPinnedClass}" data-category="${(item.category || '').toLowerCase()}" data-pinned="${item.pinned ? 'true' : 'false'}">
+    <article class="notification-card ${cardPinnedClass}" id="${item.id}" data-category="${(item.category || '').toLowerCase()}" data-pinned="${item.pinned ? 'true' : 'false'}">
       <div class="notif-card-header">
         <div class="notif-badges-group">
           ${pinnedBadge}
@@ -182,23 +198,24 @@ function sortNotifications(items) {
 }
 
 /**
- * Initialize Home Page Announcements Teaser Widget (#homeNotificationsContainer)
+ * Initialize Home Page Minimal Horizontal Strip Announcements (#homeNotificationsContainer)
+ * Displays maximum 5 latest items in minimal horizontal strip rows
  */
 async function initNotificationsHome() {
   const container = document.getElementById('homeNotificationsContainer');
   if (!container) return;
 
-  // Immediate synchronous render from fallback store to prevent blank screen
+  // Immediate synchronous render of up to 5 items from fallback store
   const initialSorted = sortNotifications(FALLBACK_NOTIFICATIONS);
-  container.innerHTML = initialSorted.slice(0, 3).map(item => renderNotificationCardHTML(item, { isCompact: true })).join('');
+  container.innerHTML = initialSorted.slice(0, 5).map(item => renderHomeNotificationStripHTML(item)).join('');
 
   // Then fetch fresh data asynchronously if available
   const rawData = await fetchNotifications();
   const sorted = sortNotifications(rawData);
-  const topItems = sorted.slice(0, 3);
+  const topItems = sorted.slice(0, 5);
 
   if (topItems.length > 0) {
-    container.innerHTML = topItems.map(item => renderNotificationCardHTML(item, { isCompact: true })).join('');
+    container.innerHTML = topItems.map(item => renderHomeNotificationStripHTML(item)).join('');
   }
 }
 
@@ -216,6 +233,20 @@ async function initNotificationsBoard() {
   let allItems = sortNotifications(FALLBACK_NOTIFICATIONS);
   let currentCategory = 'all';
   let searchTerm = '';
+
+  function handleHashScroll() {
+    if (window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        setTimeout(() => {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetEl.classList.add('is-target-highlighted');
+          setTimeout(() => targetEl.classList.remove('is-target-highlighted'), 3000);
+        }, 150);
+      }
+    }
+  }
 
   function renderFilteredList() {
     const filtered = allItems.filter(item => {
@@ -265,6 +296,7 @@ async function initNotificationsBoard() {
     }
 
     listContainer.innerHTML = filtered.map(item => renderNotificationCardHTML(item)).join('');
+    handleHashScroll();
   }
 
   // Immediate synchronous render
@@ -295,6 +327,8 @@ async function initNotificationsBoard() {
       renderFilteredList();
     }
   });
+
+  window.addEventListener('hashchange', handleHashScroll);
 }
 
 // Auto-run on DOMContentLoaded and immediate fallback

@@ -2866,11 +2866,83 @@ textarea.form-control {
    Announcement & Notification System Components
    ========================================================================== */
 
-.notifications-home-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
+/* Homepage Minimal Horizontal Notification List */
+.notifications-home-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 980px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.notification-strip-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: 1.15rem 1.6rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-primary-navy);
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-strip-item:hover {
+  background-color: #FFFFFF;
+  border-color: var(--color-accent-green);
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(29, 60, 52, 0.08);
+}
+
+.notification-strip-title {
+  font-family: var(--font-sans-body);
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: var(--color-primary-navy);
+  line-height: 1.45;
+  flex: 1;
+  transition: color var(--transition-fast);
+}
+
+.notification-strip-item:hover .notification-strip-title {
+  color: var(--color-accent-green);
+}
+
+.notification-strip-arrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.notification-strip-item:hover .notification-strip-arrow-wrap {
+  background-color: var(--color-accent-green);
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .notification-strip-item {
+    padding: 0.95rem 1.15rem;
+  }
+  .notification-strip-title {
+    font-size: 0.96rem;
+  }
+  .notification-strip-arrow-wrap {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .notifications-board-list {
@@ -2878,6 +2950,22 @@ textarea.form-control {
   flex-direction: column;
   gap: var(--space-lg);
   margin-bottom: var(--space-3xl);
+}
+
+.notification-card:target,
+.notification-card.is-target-highlighted {
+  border-color: var(--color-accent-green);
+  box-shadow: 0 0 0 3px rgba(110, 163, 93, 0.25), var(--shadow-lg);
+  animation: pulseTargetHighlight 2.5s ease-out;
+}
+
+@keyframes pulseTargetHighlight {
+  0% {
+    box-shadow: 0 0 0 6px rgba(110, 163, 93, 0.4), var(--shadow-lg);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(110, 163, 93, 0), var(--shadow-md);
+  }
 }
 
 .notification-card {
