@@ -6,6 +6,16 @@
 // Embedded fallback data in case of offline / local file protocol access
 const FALLBACK_NOTIFICATIONS = [
   {
+    id: "notif-launch-2026",
+    title: "Official Announcement: The EconVision Web Platform is Officially Live!",
+    date: "2026-08-22",
+    category: "General",
+    content: "We are thrilled to announce that the official EconVision web platform is now live! EconVision is an independent academic and professional networking initiative founded to bridge economics undergraduates, graduate scholars, college faculty, pre-doctoral researchers, and policy analysts across India and globally. Our platform provides open access to 27 curated datasets and literature indexes, 14 peer-reviewed long-form empirical papers, active research working groups, and a collaborative forum dedicated to open science, thesis clinics, and graduate guidance. Explore our resource directories, read our latest working papers, and connect with fellow economists across our active WhatsApp and LinkedIn channels.",
+    isNew: true,
+    pdfUrl: "assets/docs/econvision-official-launch-announcement.pdf",
+    pinned: true
+  },
+  {
     id: "notif-001",
     title: "Call for Papers: EconVision Working Paper Series (Fall 2026)",
     date: "2026-08-20",
